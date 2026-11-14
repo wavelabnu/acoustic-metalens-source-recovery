@@ -1,0 +1,3 @@
+arm,probability_s1,probability_s2,log_odds_s1,condition
+nolens,0.500009,0.499991,3.79809e-05,mean recording of s1; lens probabilities drawn as displayed bounds
+lens,0.999,0.001,3499.14,

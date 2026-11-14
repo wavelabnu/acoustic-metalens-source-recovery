@@ -1,0 +1,81 @@
+{
+  "upstream_repository": "https://github.com/wavelabnu/metalens-paper",
+  "upstream_commit": "eb00db8387dc7965de1d170247d3316df09b90f6",
+  "inputs_sha256": {
+    "decoder_failures_ranks.npz": "554569e00d55b7134105751690a4730eab5420423ecff903fe053877241f7d2e",
+    "exp06_recon_matrix.npz": "9cca5b0862f95e4d28bb6ec4d6736ff1d026e40ba60baec0c35d58c3bb4c2153",
+    "exp06_threshold_provenance.json": "f1fd9bdf141c7367d9801ec494917959ce825d6400bd70891e6ae718dad50dec",
+    "exp06_validation.npz": "170f8ed278ca1c118ace8e586cf9aed675c2e1b4ddf16a21e02f6c867f9cbddf",
+    "fig01_channels.json": "4090bc0dd82ddebf591575d50d094e21d5f35abacb93a49228f99f5300a25560",
+    "fig01_pair.json": "b486b2a29a62ee75fc42d26efef1fcb729cb4f86187b7c8362993c8523ebfdb2",
+    "fig01_pair_fields.json": "e612a2506a0d104f5a4c511f66eb2966d0a5f8e88ade48f58082168cccd65e20",
+    "fig01_pair_fields_extract.npz": "71837dec872572e8600ad211c9ac1c319ae1e669f814a49005eb430f820c3733",
+    "fig02_model_examples.npz": "3df5432784f04cda9ae6014cf0be34fe6a62a86e5776dfecff1872f93e5f9b26",
+    "fig02_model_thresholds.npz": "7d561f02ac9b1301fb632f44483d107b38d9c0e5e7bc0d060d5208edaf8e87c7",
+    "fig03_measured_budget.json": "997e85e4cbaa8732194d69a3f83e83acb4727561227541021d7c452169d2fe63",
+    "fig03_measured_budget.npz": "0bedd38554077c0c4f514c5a35849c8a261d9edb9d7675cf952307ff4a6d75b5",
+    "fig04_rows.npz": "1ca6c03669c65f29492810472cbbb6ca1b795e9d143ba0eadfe4cf09a7f7580b",
+    "fig04_tsvd_complex.npz": "acfb46facf3e01278d56075419c8523576b24c9f7d5cd79ea455f61569fed6fd",
+    "geometry.json": "e0476c59e7db331cb055b911e2860ddf395a45b5770470cf208f268062c750b8",
+    "photo_setup_withlens.jpg": "a5584ecaf0434d74d1097713fcada90093b3d9ff744d1df8989f1c338481f284",
+    "scalar_ladder_phasors.json": "0d7ac8f0d0d135534bddf616d396c2868fbbc51116aea9b1a1b16e67ae1e74b3",
+    "scalar_ladder_phasors.npz": "678c5b68cf446854fac5af72556356804dd3eb2874f804173167e4d060d0246e"
+  },
+  "source_sha256": "9672f8883f755d1286e910a11c66f2ce68ad3c9aa6205edd9203f9bd90b70231",
+  "figure1_discriminant": "z = Re[delta_y^H (y-y_bar)] / ((sigma/sqrt(2))*norm(delta_y)); delta_y=T(s2-s1)",
+  "figure1_layout": "one bordered condition badge per field/density row; numerical separation and mean summaries omitted; object labels and inset field quantity distinguished; microphones pointer vertically downward; decorative row dividers removed; columns centred at 16/78/152.5 mm and cell contents at common row centres 34.5/87.5 mm",
+  "model_noise_seed": 20261104,
+  "model_amplitude_draws": 200,
+  "model_amplitude_sources": [
+    "cos_p1",
+    "sin_p2",
+    "cos_p4"
+  ],
+  "model_amplitude_budget_db": 64,
+  "figure2_preserved_numerics": [
+    "detection",
+    "scalar amplitude",
+    "frozen no-lens profile draw"
+  ],
+  "figure2_amplitude_comparison": "both arms at their own sigma1-normalized 64 dB",
+  "figure4_conditional_level": "assumed recording-error bound epsilon = 0.03*sigma1*norm(source)",
+  "figure4_amplitude_axes": "wide recorded errors 0-10 percent; separate aligned conditional limits 0-65 percent; all values preserved",
+  "figure5_insets": "separate compatible- and wrong-prior shifts; same estimates, uniform physical display magnification, no point displacement",
+  "figure5_layout": "168 by 136 mm; column pitch 82 mm; row pitch 64 mm; unchanged 34 by 40 mm coefficient axes",
+  "figure5_arrow_labels": "data-only to compatible and wrong priors; change in full-source relative profile error, percentage points",
+  "source_glyphs": "eight actual drive components; each glyph normalized to its own peak for display",
+  "model_prior_reference": "with-lens real-stack SVD, one-based directions 3 and 5",
+  "model_prior_budget_db": 24,
+  "model_prior_standardized_displacement": [
+    0.4,
+    -0.55
+  ],
+  "model_neural_results_sha256": "c957b791c116baa39dbff03927eae610e091755618d9d5357a3213b5934366be",
+  "model_neural_geometry_sha256": "9da3e1ee1040fc4faf3ecc82b81b14530692e691afc39d7c24785557959daaf6",
+  "measured_prior_target": "image:pair_gap_0_2, all five repeats",
+  "measured_profile_display_selection": "C8 hard rank 5, baseline 0, record 0 in every cell; RMS uses all five records",
+  "figure3": "full-profile RMS recovery budgets recalculated from EXP06; detection/amplitude unchanged",
+  "reconstruction_metric": "RMS relative full complex profile error; no phase or amplitude refitting",
+  "reconstruction_tolerance": 0.7071067811865475,
+  "reconstruction_mean_square_tolerance": 0.4999999999999999,
+  "reconstruction_averaging": "exact noise expectation in Figures 2/3; five acquired records in Figure 4",
+  "figure3_amplitude_rtol": 0.04,
+  "amplitude_target_mean_square_error": 0.0016,
+  "amplitude_tolerance_selection": {
+    "coverage": 0.95,
+    "rank": 56,
+    "cutoff": 0.03600560427560922,
+    "step": 0.01,
+    "selected": 0.04,
+    "count": 58,
+    "recording_count": 290,
+    "passing_count": 56
+  },
+  "figure3_amplitude_noise": "assumed independent proper-complex noise after baseline standard-deviation normalization",
+  "figure3_amplitude_budget_grid_db": [
+    -40.0,
+    160.0,
+    0.1
+  ],
+  "figure4_error_level_provenance": "0.03 is a selected scale motivated by EXP06 recording-prediction-error medians; not a universal bound"
+}

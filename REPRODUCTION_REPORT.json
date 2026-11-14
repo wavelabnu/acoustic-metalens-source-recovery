@@ -1,0 +1,128 @@
+{
+  "prepared_date": "2026-11-14",
+  "version": "1.0.0",
+  "status": "prepared_for_author_review",
+  "reserved_doi": "10.5281/zenodo.24221204",
+  "doi_registered": false,
+  "github": "https://github.com/wavelabnu/acoustic-metalens-source-recovery",
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": {
+      "numpy": "2.3.4",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.7",
+      "torch": "2.9.0+cpu",
+      "pytest": "9.0.3"
+    }
+  },
+  "verification": {
+    "tests_passed": 30,
+    "main_numerical_claims_passed": 309,
+    "main_numerical_claims_total": 309,
+    "all_figure_builders_completed": 14,
+    "unchanged_prior_checkpoints_verified": 18,
+    "original_raw_ladder_hashes_verified": 40,
+    "noise_band_values_recomputed": 1200,
+    "catalogue_raw_source_hashes_recorded": 461,
+    "supplementary": {
+      "catalogue": {
+        "A": {
+          "minimum_distance_recomputed": 63.81276591761503,
+          "matched_filter_correct_recomputed": 105,
+          "total": 105,
+          "saved_unet_counts_verified": [
+            105,
+            105,
+            105
+          ]
+        },
+        "B": {
+          "minimum_distance_recomputed": 172.26733929702823,
+          "matched_filter_correct_recomputed": 105,
+          "total": 105,
+          "saved_unet_counts_verified": [
+            105,
+            105,
+            105
+          ]
+        }
+      },
+      "rank_rows_verified": 24,
+      "conditional_union_bound_reference": 6.60845745822361,
+      "covariance_numerical_fields_verified": 1111
+    }
+  },
+  "final_manuscript_identities_sha256": {
+    "main_pdf": "153c6b5cc6aae6e80d900dfa93bb3fa404a1ee2387d7304ff2069ab08e83c336",
+    "supplement_pdf": "8d6f91faf8d26366e5213cfaf7820fad3e635e4551b09811bb1829eb708f4bfe",
+    "final_latex_zip": "1f49340ff27f569a1eb0ba2e1fdf92995c4e5a31b8bdc215eeed1a54bb57e66f"
+  },
+  "upstream_archives": [
+    {
+      "archive": "metalens-direct-code.zip",
+      "sha256": "1166fe10db195f9c3b39e0752f55cf7bd93005e6485f37ae5547ec3ea4bf17d6",
+      "manifest_entries_verified": 39,
+      "files": 40,
+      "release": {
+        "created_utc": "2026-11-12T21:28:13.886166+00:00",
+        "source_commit": "03060a5b5edaaf2fb0a7132aea0e8dfb7713e99f",
+        "source_tree_dirty": false,
+        "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26300-SP0",
+        "dependencies": {
+          "numpy": "2.3.4",
+          "scipy": "1.16.3",
+          "matplotlib": "3.10.7",
+          "torch": "2.9.0",
+          "pytest": "9.0.3"
+        },
+        "doi": null,
+        "license_file_included": false,
+        "checkpoint_count": 0,
+        "scope": "Current main and Supplement only; 12 Figure 5 and 6 Note 14 checkpoints",
+        "payload": "code",
+        "repository": "https://github.com/Nurtugann/metalens-direct",
+        "paired_archive": "metalens-direct-data.zip"
+      }
+    },
+    {
+      "archive": "metalens-direct-data.zip",
+      "sha256": "6e73472f5c0b015568321c3dcc2653dd85637e4b22b5d8deaa7546d4c766e69c",
+      "manifest_entries_verified": 128,
+      "files": 129,
+      "release": {
+        "created_utc": "2026-11-12T21:28:16.923138+00:00",
+        "source_commit": "03060a5b5edaaf2fb0a7132aea0e8dfb7713e99f",
+        "source_tree_dirty": false,
+        "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26300-SP0",
+        "dependencies": {
+          "numpy": "2.3.4",
+          "scipy": "1.16.3",
+          "matplotlib": "3.10.7",
+          "torch": "2.9.0",
+          "pytest": "9.0.3"
+        },
+        "doi": null,
+        "license_file_included": false,
+        "checkpoint_count": 18,
+        "scope": "Current main and Supplement only; 12 Figure 5 and 6 Note 14 checkpoints",
+        "payload": "data",
+        "repository": "https://github.com/Nurtugann/metalens-direct",
+        "paired_archive": "metalens-direct-code.zip"
+      }
+    }
+  ],
+  "publication_decisions_pending": [
+    "Approve public release of the selected code, data and manuscript snapshots",
+    "Select author-owned code and data/documentation reuse licences"
+  ],
+  "limits": [
+    "Only forty raw waveforms are distributed; other raw recordings and complete tube acquisitions are not included",
+    "The original six catalogue U-Net weight files were not saved upstream; predictions, measured inputs and a retraining recipe are included",
+    "Exact noisy Figure 2c realizations and profile-session catalogue bootstrap values remain frozen inputs",
+    "No new catalogue training was run during release preparation; no article DOI is asserted"
+  ],
+  "source_commit": "Read CODE_RELEASE.json and DATA_RELEASE.json in the release archives for the exact prepared Git commit"
+}

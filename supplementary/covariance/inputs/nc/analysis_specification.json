@@ -1,0 +1,41 @@
+{
+  "run_started_utc": "2026-11-09T12:28:07.613033+00:00",
+  "status": "Exploratory, existing data already examined; not a retrospective preregistration",
+  "rerun_note": "Initial results inspected, then C9 regression checks and a full empirical baseline-covariance forecast sensitivity check added; recovery estimators, metrics and comparisons unchanged",
+  "calibration_averages": [
+    1,
+    3,
+    9
+  ],
+  "subsets": "all combinations, no selection",
+  "additional_operator": "end-of-session nine-repeat mean",
+  "source_profiles": "all 16 T16 profiles, original release order",
+  "estimators": [
+    "real",
+    "complex"
+  ],
+  "weights": [
+    "w9x5",
+    "sigma5"
+  ],
+  "metric": "full relative profile error per recovery, no fitted phase or amplitude",
+  "comparison": "within-profile ranges across ALL pairs of single-repeat operators, not matched repeat IDs",
+  "noise_only": "mean H exact; fixed sigma; ridge bias plus diagonal circular baseline noise; fixed baseline mean",
+  "noise_covariance_sensitivity": "Also propagate the full empirical covariance of the nine complex baseline shots about their mean, ddof 1; rank at most eight, not a precise covariance estimate",
+  "inference": "descriptive only, no p-values or confidence intervals from dependent resamples",
+  "scope": "one lens installation; all sources real; B6 shares baseline B; source recordings previously analysed",
+  "inputs": {
+    "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\figures\\v7_caption_cleanup_20261103\\analysis_releases_20261105\\release_T16\\transfer16.npz": "ec8ffbb91eaa8863cff0a9ec620cb731ef1125669677bda01ff1d841fff29c4b",
+    "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\figures\\v7_caption_cleanup_20261103\\analysis_releases_20261105\\release_C9\\fig06_cal9.npz": "c74a44d166e31f0b8476ca3da6e0384258ee23c1a008de75f3f9c70da2e37e05",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\A.npz": "91ef8e08126bc27ba3215c1aa558f8e94a0d28cfd3cf68c25b869f0cdca62ecf",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B.npz": "5038a86c00ef089f919d176b31e5cab2116fdb2a3fd92cfb6ed7c944dce15d71",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B6.npz": "dbb14ff57afd105cd11fe7b4b441552d915bcbbea7bc275eea257bad9960b3c0",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\A_ladder.npz": "a1fba86c6e0dd4111f2e8f395804a6e29d13b5a65485a45330469ca74c76ea6d",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B_ladder.npz": "03cc971af3fdff94d0dd036ee2a5c1c22653a85b592301631fb92777361681ed",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B6_ladder.npz": "86661fa4c86babc402bc849fe5e5be9812f94de74d6ccd1cec65b715d6c01d92",
+    "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_A_nolens.npz": "d0efdc52aa635e01b614c67c342cb30ffccc90e648fb9db587ce2a4f780dedb3",
+    "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_B_withlens.npz": "57bb3e106ad398a4313962298fb348cdfe83966e96ba7c02aeb2b0863ffeab5e",
+    "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_B6_nolens.npz": "8934d9b0d2b1a1f3fd9bb60608bfc425a6c98a959f7c771ae08e1f5e52d41993"
+  },
+  "script_sha256": "84033da0daccc4dfa99671558787c3f4b05cd62f62c0ed26b083bf207efde9e9"
+}

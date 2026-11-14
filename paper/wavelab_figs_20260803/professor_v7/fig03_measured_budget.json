@@ -1,0 +1,107 @@
+{
+  "script": "analysis/desk/release_20261105/fig03_measured_budget.py",
+  "script_sha256": "a8c15f3b4086b1e77951928dc7eb9326f0f7a6f2b6ad97fbe9df5722764e0746",
+  "definitions": "release_A/DEFINITIONS_TABLE.md (supersedes the rank rule of DEFINITIONS_v7.md section 3 for this rule only)",
+  "budget_sweep_db": [
+    -40.0,
+    160.0,
+    0.1
+  ],
+  "seed": 20261104,
+  "arms": {
+    "nolens": {
+      "arm": "A",
+      "operator_sha256": "527f1f3ce9d93b1012df7c33a2ec660efab6406dd259ffce2b885722632711dd",
+      "run_id": "exp06_validation_nolens_A_20260811_a",
+      "cache_sha256": {
+        "A.npz": "91ef8e08126bc27ba3215c1aa558f8e94a0d28cfd3cf68c25b869f0cdca62ecf",
+        "A_ladder.npz": "a1fba86c6e0dd4111f2e8f395804a6e29d13b5a65485a45330469ca74c76ea6d"
+      },
+      "available_db": 51.93293161283065,
+      "floor_rank": 3,
+      "hard_median_vs_frozen_max_dev": 2.1094237467877974e-15,
+      "median_vs_draws_max_dev": 0.00013502232560502758,
+      "n_draws": 20001,
+      "recovered_disagree": [
+        "sin_p1"
+      ],
+      "ridge_disagree": [
+        "sin_p2",
+        "sin_p3",
+        "cos_p4"
+      ],
+      "ridge_median_vs_draws_max_dev": 0.0016932479653516408,
+      "fig04_rows_max_dev": {
+        "shot": 1.7763568394002505e-15,
+        "drawn": 1.7763568394002505e-15,
+        "unit": 1.7763568394002505e-15,
+        "r": 2.5604518505417673e-15,
+        "ridge_A": 1.6271428648906294e-12
+      },
+      "shot_minus_prediction_db": [
+        0.06556806737503251,
+        -0.1303322973803276,
+        0.15906652910921437,
+        -0.05290252231785253,
+        -0.06228470273632247,
+        0.28674160906860635,
+        0.24092586438856234,
+        0.11402569077439928
+      ]
+    },
+    "lens": {
+      "arm": "B",
+      "operator_sha256": "434cced0a1f8d5b7aa91954633acd244ddf6e040dec7ea683e4237a7a5a41ec3",
+      "run_id": "exp06_validation_withlens_B_20260812_a",
+      "cache_sha256": {
+        "B.npz": "5038a86c00ef089f919d176b31e5cab2116fdb2a3fd92cfb6ed7c944dce15d71",
+        "B_ladder.npz": "03cc971af3fdff94d0dd036ee2a5c1c22653a85b592301631fb92777361681ed"
+      },
+      "available_db": 57.93943265542785,
+      "floor_rank": 4,
+      "hard_median_vs_frozen_max_dev": 1.1102230246251565e-15,
+      "median_vs_draws_max_dev": 8.972905564125222e-05,
+      "n_draws": 20001,
+      "recovered_disagree": [
+        "sin_p1",
+        "sin_p2"
+      ],
+      "ridge_disagree": [],
+      "ridge_median_vs_draws_max_dev": 0.0005395215516007523,
+      "fig04_rows_max_dev": {
+        "shot": 3.552713678800501e-15,
+        "drawn": 3.552713678800501e-15,
+        "unit": 3.552713678800501e-15,
+        "r": 1.496198998029996e-17,
+        "ridge_A": 2.078337502098293e-13
+      },
+      "shot_minus_prediction_db": [
+        0.07595699911426834,
+        0.09395941132747865,
+        0.10218349698834928,
+        0.07591243830736616,
+        -0.008813378462676269,
+        0.17916777307905107,
+        0.1374584805375605,
+        -0.12767646149401912
+      ]
+    }
+  },
+  "fig04_rows_sha256": "1ca6c03669c65f29492810472cbbb6ca1b795e9d143ba0eadfe4cf09a7f7580b",
+  "noise": "rms over nine baseline shots, ddof 1",
+  "rank_edge": 55.53844279831294,
+  "rank_edge_real_stack": 75.02850041269508,
+  "rule": "recovery d: complex inverse at the complex stack's own floor rank, edge 3(sqrt(KM)+sqrt(N)); detection b and real-source r c unchanged; rule id REC-floor-complex-v1",
+  "derived_from": {
+    "script": "paper repo scripts/fig03_measured_budget.py",
+    "commit": "fig3-ladder da6bd51",
+    "sha256": "d8814db277a1f18bb1d030354335c61001fa8602e2ff80d39158a32998cdc6dd"
+  },
+  "gate": {
+    "floor_rank_equals_fig01_channels": true,
+    "fig4_33mm": true,
+    "floor_rank_verdicts_equal_hard_rank_verdicts_all_16": false,
+    "ridge_sweep_vs_bench": false,
+    "note": "recorded, not required: two truncation rules need not give equal verdicts; nothing is tuned to these"
+  }
+}

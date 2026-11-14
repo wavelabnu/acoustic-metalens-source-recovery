@@ -1,0 +1,9 @@
+speaker,s1,s2,fill,a_max,cmap,source,photo_asset,photo_original,photo_shot,photo_crop_px
+1,0.282342,0.3017,"signed a / a_max, linear, limits -1 to 1; redundant minus marks; a_max = max |a| over both sources; own legend, not the field's",0.635874,signed_drive_blue_coral,"analysis release A2, fig01_pair.json, model.pairs.rule_v1_v8.s1, .s2",photo_setup_withlens.jpg,20260812_111951.jpg,2026-08-12 11:19:51,"(1025, 825, 3175, 2402)"
+2,0.339299,0.186298,,,,,,,,
+3,-0.0188656,0.476098,,,,,,,,
+4,0.635874,-0.219244,,,,,,,,
+5,-0.219244,0.635874,,,,,,,,
+6,0.476098,-0.0188656,,,,,,,,
+7,0.186298,0.339299,,,,,,,,
+8,0.3017,0.282342,,,,,,,,

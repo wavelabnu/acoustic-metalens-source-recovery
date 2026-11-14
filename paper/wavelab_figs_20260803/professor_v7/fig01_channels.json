@@ -1,0 +1,105 @@
+{
+  "rule_id": "CH-complex-fixed-sigma-v1",
+  "rule": "number of singular values of the fixed-sigma complex stack T = H/sigma above 3(sqrt(KM)+sqrt(N))",
+  "status": "operational cutoff specified after acquisition (decision #70(iii), 2026-11-05); not a demonstrated false-alarm probability or a universal physical limit",
+  "no_lens": 3,
+  "with_lens": 4,
+  "no_lens_session": "A",
+  "with_lens_session": "B",
+  "no_lens_B6_same_rule": 3,
+  "edge": 55.53844279831294,
+  "K": 41,
+  "M": 6,
+  "N": 8,
+  "noise_convention": "sigma(tone, mic) = rms of the nine baseline recordings about their mean, ddof 1, one recording, E|n|^2 = sigma^2; B6 uses the baseline of B",
+  "drive_convention": "H from the mean of nine calibration recordings minus the baseline mean, not divided by the AO phasor; singular values are per unit-norm drive vector in units of the calibration drive per speaker (0.1 V/ch, v = 1)",
+  "singular_values": {
+    "A_no_lens": [
+      395.04501023018446,
+      86.66426171946165,
+      73.18693296697485,
+      12.892008534130142,
+      7.740330936825591,
+      5.603463680876197,
+      4.968155319326029,
+      4.069000727834208
+    ],
+    "B_with_lens": [
+      788.8085925695169,
+      221.06874595602264,
+      165.9266328941978,
+      79.69015744929841,
+      40.485904171760005,
+      21.089081300252484,
+      12.797409499151756,
+      7.986928871665476
+    ],
+    "B6_no_lens": [
+      479.5795800641005,
+      104.42488771808954,
+      87.57371388451743,
+      15.780717034723859,
+      9.612522989401446,
+      7.319559161611605,
+      5.9723666173908425,
+      4.970580740380771
+    ]
+  },
+  "margins_db_to_edge": {
+    "A_no_lens": [
+      17.04105763842442,
+      3.864926859126381,
+      2.3967969782045944,
+      -12.685462287795136,
+      -17.11668338874652,
+      -19.922742746850616,
+      -20.96797068002204,
+      -22.702118623669584
+    ],
+    "B_with_lens": [
+      23.047558681021613,
+      11.99867297863535,
+      9.50644803067004,
+      3.1362197234224194,
+      -2.74579711800952,
+      -8.410720753178593,
+      -12.749432634704423,
+      -16.844277638406705
+    ],
+    "B6_no_lens": [
+      18.72533968701242,
+      5.484206364918158,
+      3.9556013845642495,
+      -10.929339323745424,
+      -15.235126144935332,
+      -17.602175466475437,
+      -19.36894478831363,
+      -20.96373132002718
+    ]
+  },
+  "other_conventions_for_si": {
+    "fixed_sigma_real_stack": {
+      "no_lens": 3,
+      "with_lens": 5,
+      "edge": 75.02850041269508
+    },
+    "historical_baseline_weighted": {
+      "no_lens": 3.0,
+      "with_lens": 5.0,
+      "floor": 75.0,
+      "source": "exp06_recon_matrix.npz keys {A,B,B6}_spectrum, _rank: unchanged; SI label: baseline-weighted complex spectrum, s_tilde units"
+    }
+  },
+  "inputs_sha256": {
+    "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_A_nolens.npz": "d0efdc52aa635e01b614c67c342cb30ffccc90e648fb9db587ce2a4f780dedb3",
+    "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_B_withlens.npz": "57bb3e106ad398a4313962298fb348cdfe83966e96ba7c02aeb2b0863ffeab5e",
+    "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_B6_nolens.npz": "8934d9b0d2b1a1f3fd9bb60608bfc425a6c98a959f7c771ae08e1f5e52d41993",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\A.npz": "91ef8e08126bc27ba3215c1aa558f8e94a0d28cfd3cf68c25b869f0cdca62ecf",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B.npz": "5038a86c00ef089f919d176b31e5cab2116fdb2a3fd92cfb6ed7c944dce15d71",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B6.npz": "dbb14ff57afd105cd11fe7b4b441552d915bcbbea7bc275eea257bad9960b3c0",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\A_ladder.npz": "a1fba86c6e0dd4111f2e8f395804a6e29d13b5a65485a45330469ca74c76ea6d",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B_ladder.npz": "03cc971af3fdff94d0dd036ee2a5c1c22653a85b592301631fb92777361681ed",
+    "C:\\Users\\Bakhtiyar\\exp06_cache\\B6_ladder.npz": "86661fa4c86babc402bc849fe5e5be9812f94de74d6ccd1cec65b715d6c01d92"
+  },
+  "script_sha256": "9047e592396d6c1a73b9a95c144c6f9455160c59aa53f376249614886ed4fda9"
+}

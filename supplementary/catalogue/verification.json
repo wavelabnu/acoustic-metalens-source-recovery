@@ -1,0 +1,56 @@
+{
+  "base_archive": "D:\\Downloads\\Resolution_limits_of_subwavelength_acoustic_source_recovery_through_a_resonant_metalens__1_.zip",
+  "base_sha256": "7f9406e44baf57d0f8c46c16a775c5414085dfc205cd4a0c84423816632886ae",
+  "main_figure_count": 5,
+  "supplement_figure_count": 9,
+  "supplement_note_count": 18,
+  "abstract_whitespace_words": 148,
+  "displayed_fig4_vs_C8_max_component_deviation": 4.921516573608287e-06,
+  "catalogue_recomputed": {
+    "A": {
+      "d_min": 63.81276591761503,
+      "matched": {
+        "correct": 105,
+        "total": 105
+      },
+      "unet_primary": {
+        "correct": 105,
+        "total": 105
+      }
+    },
+    "B": {
+      "d_min": 172.26733929702823,
+      "matched": {
+        "correct": 105,
+        "total": 105
+      },
+      "unet_primary": {
+        "correct": 105,
+        "total": 105
+      }
+    },
+    "EXP06_A": {
+      "d_min": 40.512699577801314,
+      "within_session_bootstrap_ci95": [
+        37.11591951498007,
+        66.17832671698487
+      ]
+    }
+  },
+  "conditional_catalogue_threshold": 6.60845745822361,
+  "unresolved_author_inputs": [
+    "Reviewer-accessible data/code link or DOI",
+    "Code reuse terms",
+    "Full author-contribution statement"
+  ],
+  "numerical_inputs_sha256": {
+    "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\figures\\v7_caption_cleanup_20261103\\analysis_releases_20261105\\release_C8\\fig04_tsvd_complex.npz": "acfb46facf3e01278d56075419c8523576b24c9f7d5cd79ea455f61569fed6fd",
+    "D:\\Projects\\cmm\\analysis\\unet_contrast.npz": "e1a903abf9e32661eabde9193a9970f1cdda203d24e05d9141fa5c3b8c1d7546",
+    "D:\\Projects\\cmm\\analysis\\exp06_validation.npz": "170f8ed278ca1c118ace8e586cf9aed675c2e1b4ddf16a21e02f6c867f9cbddf",
+    "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\figures\\v7_caption_cleanup_20261103\\analysis_releases_20261105\\release_C10\\c10.json": "e4d2fc54ae6b122faf25855d367ef003afd9be1242bdf5520d25541fc4fab264"
+  },
+  "source_outputs_sha256": {
+    "main.tex": "b727110a4186f4f860680704ed5550c99dd03c1e9a691a4e9f6517fcafe69bbd",
+    "supplement.tex": "adf801631d412dbf89817603e68306455a6100ef9ebff82e07d2beca59b2017c"
+  }
+}

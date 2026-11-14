@@ -1,0 +1,12 @@
+{
+  "script": "scripts/fig02_model_examples.py",
+  "script_sha256": "0c4e7f95be3aef1a76a562adb5232fb60c51b0ff2b3ff53dd8cbfa5e04e80e91",
+  "adds_to": "data/fig02_model_thresholds.npz",
+  "adds_to_sha256": "6083c1fa79d468eff0c518fb1b9f771116864ac35f7f7a2afc177bca7bd454f6",
+  "direct_physics_sha256": "7dd023f2b7edacdafcb21ee3e38fa6002a0d73fdf81906d63317ff9bc356ebc5",
+  "n_draws": 200,
+  "seeds": [
+    20261106,
+    20261107
+  ]
+}

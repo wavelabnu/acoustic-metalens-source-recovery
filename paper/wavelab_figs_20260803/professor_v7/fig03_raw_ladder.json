@@ -1,0 +1,333 @@
+{
+  "source": "EXP 06 A/B shared cmm Drive; only the forty ladder records absent from the compact phasor exports",
+  "sampling_hz": 51200,
+  "samples_per_record": 51200,
+  "channels": 6,
+  "method": "2*rfft(wave,axis=1)/51200 at the 41 acquired integer-Hz bins; subtract the session baseline mean; divide summed power by summed centred sample baseline variances (denominator eight)",
+  "campaign_manifests": {
+    "A": "https://drive.google.com/file/d/18w_viH8CdyWFh8MsvsDqwsbHzgSXDaT2/view",
+    "B": "https://drive.google.com/file/d/1dm7hK8m81g5s9KcseTa4R1sLcCdnFDj3/view"
+  },
+  "inputs": [
+    {
+      "arm": "A",
+      "mode": "cos_p1",
+      "file": "seq_084_rep_00.npy",
+      "drive_id": "1z5-NpER3s14CrsgGz1E7YmSwhD-LpcZk",
+      "sha256": "cd4e5e225d740caf0413df58a157ab4c0271aa97f9e0c552bf42b0623297ff1c",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_084_rep_00.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p1",
+      "file": "seq_087_rep_03.npy",
+      "drive_id": "1Nl7OueErwKUzqSxBEQI6Hmu5hIJhZ2zZ",
+      "sha256": "f805150a16124c4c016ca54156c6fb3f1876d3ff840a521130b69d64d1112c53",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_087_rep_03.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p1",
+      "file": "seq_097_rep_01.npy",
+      "drive_id": "1SokmjeOaafUzyKh23mUCZpFyDbS3IVZI",
+      "sha256": "cc437043adebe669c90c18fe679276e4854f9fe3d5687a57477e45c1892e8f65",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_097_rep_01.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p1",
+      "file": "seq_100_rep_04.npy",
+      "drive_id": "1vUMRwnM_VJ79xMCr-btAEI3Z4jP5kuVp",
+      "sha256": "5fceb3a56cc8a846859752bef65f2b81fb7be3e31b8cce37a4a068524c239ec1",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_100_rep_04.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p1",
+      "file": "seq_114_rep_02.npy",
+      "drive_id": "1V3dBhN9EJTmCs-iKTViAoTRErVg3vgiU",
+      "sha256": "07150b9cda60696261146338f53117eddcc9d31571da90705c30c80da9dbcfe5",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_114_rep_02.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p2",
+      "file": "seq_082_rep_01.npy",
+      "drive_id": "1s4_R_hm5c0T71G-5hy9sKdWZ0z62KGap",
+      "sha256": "af4b47c20c6674beac3a17b28a71d115d1466642f6e36cdd7c067f2fa44e45a7",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_082_rep_01.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p2",
+      "file": "seq_083_rep_04.npy",
+      "drive_id": "13YdUWfSi7i3whJvK1qS8rMKE4GkujfKt",
+      "sha256": "1e7d6c8460a722b8ec9499ec9f9dd5435bde12038e569f3e73c18eeabc9256a5",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_083_rep_04.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p2",
+      "file": "seq_106_rep_02.npy",
+      "drive_id": "1lZYBP3A61utgppJ60c-8o2zmsMjTgXPs",
+      "sha256": "fb195a6fac3c310b8392587a2916d31ec3c9766ada53c4aa1e48572d77c343bb",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_106_rep_02.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p2",
+      "file": "seq_108_rep_03.npy",
+      "drive_id": "1YOWTRxi4QIj-nhJH8iEFFXtu0KiVWrHb",
+      "sha256": "210f73d526bd53b1d8dae8639f48cb2192550a676a061614ceb17822eacd24cf",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_108_rep_03.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p2",
+      "file": "seq_115_rep_00.npy",
+      "drive_id": "1L5JVhQubWkYPob7uEDqdFfghfcZTfqUP",
+      "sha256": "f8f3320b2b9e0281ccdd420d3c2902d7627d32dac84cc622027a525bc8206146",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_115_rep_00.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p3",
+      "file": "seq_093_rep_03.npy",
+      "drive_id": "1wPOsFCfNbQX6lZka7kX2BBWRHo_iT1hJ",
+      "sha256": "5675e99c08b304bb7d259765af379cce3da1dd73898956d8dd312aa8035b9cc8",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_093_rep_03.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p3",
+      "file": "seq_096_rep_00.npy",
+      "drive_id": "1d_kMlAJi2wcJ2g40nYhQYADJWS1gBrFj",
+      "sha256": "e29a8d1c8c577d5aa020a7b5c24687c57875a36433d859adfb99c663bfe99ab6",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_096_rep_00.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p3",
+      "file": "seq_099_rep_01.npy",
+      "drive_id": "13bnCRDS8aXBsmOM84nTLTjAeqUOhhzUm",
+      "sha256": "22006372fa3334203bf3c89c75fabecae96861c171f0a9fcaa6ef9530f32611f",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_099_rep_01.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p3",
+      "file": "seq_105_rep_02.npy",
+      "drive_id": "1zwqDNCNretXBn9wy1F1Sjdyzvq1tEWF6",
+      "sha256": "38106598dcc0f0028e296b366b60f202591f5cc2487ca2e147d0eac6edba5849",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_105_rep_02.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "cos_p3",
+      "file": "seq_112_rep_04.npy",
+      "drive_id": "19YMxyVGUuW_npb4nlUgSzU8Fl8BoDJHq",
+      "sha256": "b480ce27c58dcddee63e63aa92cbaad7405a11407da6a8bdb93e7b54dff84ee6",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_112_rep_04.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "sin_p3",
+      "file": "seq_101_rep_02.npy",
+      "drive_id": "1vpU77dDqNTVH-oIJbHW4reqECDWiz_lO",
+      "sha256": "0b5b48c975bc300090034f1761f1d4e71e30292847a34df059460e80d0c753c5",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_101_rep_02.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "sin_p3",
+      "file": "seq_107_rep_00.npy",
+      "drive_id": "1ss7rl3JE6yyMkuIXaRxIyUH9AtTIcGTy",
+      "sha256": "8465e2e10bbb2de9c8b109a201618e34c8af72e3b3a91a0c6e72cf24fcc61591",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_107_rep_00.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "sin_p3",
+      "file": "seq_109_rep_03.npy",
+      "drive_id": "1keXJuvNUI4ynRtXCA_7KbHJqYbLyn8AO",
+      "sha256": "7de6d7e9ad387952d27173c020e3f476716bd2cdd111c14dbbe13ddfc1c6ca71",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_109_rep_03.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "sin_p3",
+      "file": "seq_117_rep_04.npy",
+      "drive_id": "1k3dVAgFSiAEvBgrKRVgN2W8gOfQHQuta",
+      "sha256": "a68c74990a642a49857bacd7bed95a27cf2f881ce5277b1f7f538b57d4b025d8",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_117_rep_04.npy"
+    },
+    {
+      "arm": "A",
+      "mode": "sin_p3",
+      "file": "seq_118_rep_01.npy",
+      "drive_id": "1TKWvEY5ECcU5iqMyZ3UKqm37KG8TU2-0",
+      "sha256": "7c9e9622ac48b7513e0da9710aec613bcdcb8e79e85083977c5de84f61f80c31",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_118_rep_01.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p1",
+      "file": "seq_086_rep_03.npy",
+      "drive_id": "1f_maC-IgrKVOMneuuPakpHrdcT-CvwxE",
+      "sha256": "4ac06c308eda2f64ddbc864eeb3d8c74ccd9b2a8cb72d20d5d8ff593d45ed1f9",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_086_rep_03.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p1",
+      "file": "seq_096_rep_04.npy",
+      "drive_id": "1dTKaa44aOftusMikn9kRVkFbg-G_Ac5Z",
+      "sha256": "ac624a62387cb45008dbf592d0821c43fe460369ef5e4e519eb58af5535edb31",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_096_rep_04.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p1",
+      "file": "seq_109_rep_00.npy",
+      "drive_id": "1ghLJuEuWmEfVoX67d-gtrhdCssGuZV1l",
+      "sha256": "bab162445ff101b96efd295fc536b0117b288427ece795b705984ffd969ed97e",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_109_rep_00.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p1",
+      "file": "seq_111_rep_02.npy",
+      "drive_id": "1eR1CM7aWWrFkXqJTHH7LYXlsIYW8uVVz",
+      "sha256": "991332ff0e539e23fb977f969bd88fd97c7468930ea6151f325e7eb0d0fdae45",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_111_rep_02.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p1",
+      "file": "seq_115_rep_01.npy",
+      "drive_id": "1gb_goCVoKO4-N_qZ-rDvTdpEgD88-wc8",
+      "sha256": "3e07098f083efc447cd19b3eca4598e9a5b7f8dc8be5bbc69012a463005f0326",
+      "campaign_path": "ladder/cos_p1/level_0p1/seq_115_rep_01.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p2",
+      "file": "seq_099_rep_00.npy",
+      "drive_id": "1xDMA5Np22SUVBFl1yWtReOuSiNNWYvwQ",
+      "sha256": "97d45275a872df846b651c2ff6ca5cae88d1652086cc06a59f3a43bc7b143382",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_099_rep_00.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p2",
+      "file": "seq_112_rep_02.npy",
+      "drive_id": "1WasgwNZImgR2k9IB0NaVdrWKSuNFAAHo",
+      "sha256": "2dce381051658ab08ea71d90d5cf34e5616028ac0b688a5f28b1957b708852e9",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_112_rep_02.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p2",
+      "file": "seq_113_rep_03.npy",
+      "drive_id": "1zTPB1FmrUVldddHyrrGPDAsl3dz0mR5w",
+      "sha256": "b5435f392aa18fb21e04207071546315d37033c5643e1e9e6192bbbd09788553",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_113_rep_03.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p2",
+      "file": "seq_117_rep_04.npy",
+      "drive_id": "1rc_BJJ_Rx9FdVp5oteRVzXLLY13fvDb1",
+      "sha256": "8c10d7c62c7730370dc01146cbf4a96ccc11aefb41823dac16ed692194c99b38",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_117_rep_04.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p2",
+      "file": "seq_120_rep_01.npy",
+      "drive_id": "11gKow7cUE5u2YP1R46j3Lm5eA8BwFfaS",
+      "sha256": "4dac68c5b70506d3435bc6b6297156d4d935cee928276f7118ff2f5f38eb9db0",
+      "campaign_path": "ladder/cos_p2/level_0p1/seq_120_rep_01.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p3",
+      "file": "seq_085_rep_00.npy",
+      "drive_id": "1yfkw8Y79yGVMC6_SzUK40pzEnnM3CUfD",
+      "sha256": "9897d5b01456f42c0e4aac80f6638e1c85f41f60ab224387e7cd2157fb644e21",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_085_rep_00.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p3",
+      "file": "seq_089_rep_03.npy",
+      "drive_id": "1BGjmcc0TcX5CFvAPdPUMjaeygCBBeuEI",
+      "sha256": "36099d8a03cbb8172806381074cde6b7186a94d62fc596d17560f9c7b8c08e80",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_089_rep_03.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p3",
+      "file": "seq_100_rep_01.npy",
+      "drive_id": "1tj83UBPvHtHcZWZS7qlHzNHZ7bLcBER2",
+      "sha256": "9dac69937f1bc03655da91b7e90e599fc88a50760ffd6b9729b521a52bc100e2",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_100_rep_01.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p3",
+      "file": "seq_101_rep_02.npy",
+      "drive_id": "1Ze8dEeby2cdKVwJ7vW5jdTDFRCsM6jBp",
+      "sha256": "3257f6983bb0a9413d0fd8f161580c0ac1b535104da6c44ce3f3d2dbd2566280",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_101_rep_02.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "cos_p3",
+      "file": "seq_114_rep_04.npy",
+      "drive_id": "19rQEqAOaYjTuq5mEV0M9rJkl-bpZOe76",
+      "sha256": "d4bffcda618e878897f0aa0aa889741d0c0bef9915b6f53d787ec024d0003beb",
+      "campaign_path": "ladder/cos_p3/level_0p1/seq_114_rep_04.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "sin_p3",
+      "file": "seq_084_rep_02.npy",
+      "drive_id": "1W5cRinBY8RyXy0Y-buGL-oEu9sCM_V7b",
+      "sha256": "567fd1e6c5f545fc2de398e587b2b2465b65ded6c157ddbc50cbe02c6c5db8bd",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_084_rep_02.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "sin_p3",
+      "file": "seq_091_rep_00.npy",
+      "drive_id": "13viX421f86Na2Oj-ohGT49xIjpG-MygH",
+      "sha256": "1005b914b7412d5245ee35a7e8e7c2873e05313a1d9d9d2feff55e9a378258e0",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_091_rep_00.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "sin_p3",
+      "file": "seq_095_rep_03.npy",
+      "drive_id": "1_LJyrIV1faiATiJtaTnXExEp8kfhuTbX",
+      "sha256": "0f80041da5b3c358c2194205b1c79af71044c45026f672ad809627141c41a5d0",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_095_rep_03.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "sin_p3",
+      "file": "seq_098_rep_04.npy",
+      "drive_id": "1-d5_mc8LyBdM4hKBcIs2Q3KisQG_9nk6",
+      "sha256": "ef2beb15bf98a848833193bbc5ee82ac1197ba8dc246ffdd1d635ac3d95b7c0b",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_098_rep_04.npy"
+    },
+    {
+      "arm": "B",
+      "mode": "sin_p3",
+      "file": "seq_105_rep_01.npy",
+      "drive_id": "14E188L6QEqyCn4p8L1V3VawTxc45qv_r",
+      "sha256": "5ecb307a0e39ccf831a39cf03a027e0cfc10cf14eb8ba68bb8c2794864148c68",
+      "campaign_path": "ladder/sin_p3/level_0p1/seq_105_rep_01.npy"
+    }
+  ]
+}

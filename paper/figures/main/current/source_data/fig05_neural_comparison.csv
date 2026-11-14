@@ -1,0 +1,5 @@
+arm,prior,seed,x,y,analytic_x,analytic_y,relative_profile_error
+nolens,correct,101,1.00994,0.819164,1.00803,0.818039,0.128064
+nolens,wrong,101,1.10969,-0.554323,1.0983,-0.541021,1.10181
+withlens,correct,101,1.02767,0.882351,1.02842,0.883472,0.0854605
+withlens,wrong,101,0.914726,0.418871,0.96136,0.483067,0.415321

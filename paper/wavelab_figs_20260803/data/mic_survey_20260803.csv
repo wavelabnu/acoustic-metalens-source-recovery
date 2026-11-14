@@ -1,0 +1,27 @@
+# Laser survey of the six far-field microphones, recovery experiment.
+# Acquired 2026-08-03; source EXP_01_MIC_GEOMETRY.md sec. 1, which records the
+# raw shots and the solution below.  These are the RAW measurements: two
+# straight-line distances per microphone, aimed at the two ends of the source
+# array, measured from the edge of the microphone.  Nothing about an arc is
+# assumed; each microphone is solved from its own two numbers.
+#
+#   y = (d_L^2 - d_R^2) / (2 L)          lateral offset from the array centre
+#   x = sqrt(d_R^2 - (y - L/2)^2)        range along the array normal
+#   R = sqrt(x^2 + y^2),  theta = atan2(y, x)
+#
+# baseline_m is L, the centre-to-centre span of speakers 0 and 7 (8 speakers at
+# a 33 mm pitch, so 7 x 33 = 231 mm).  It is the dominant error term: theta
+# scales as 1/L, and EXP_01 sec. 6 shows channels 1-3 stable to +-1 dB over the
+# plausible range 207-264 mm.
+#
+# Read by paper/mic_survey.py.  Laser repeatability +-2 mm per shot, which is
+# +-0.7 to 0.8 deg per microphone.
+#
+baseline_m,0.231
+mic,d_left_m,d_right_m
+1,2.061,1.949
+2,2.450,2.385
+3,2.531,2.489
+4,2.465,2.471
+5,2.419,2.462
+6,2.389,2.513

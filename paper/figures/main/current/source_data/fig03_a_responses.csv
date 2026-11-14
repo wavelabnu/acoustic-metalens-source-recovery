@@ -1,0 +1,9 @@
+mode,label,k_rad_m,no_lens_shots_median_db_re_floor,no_lens_operator_prediction_db_re_floor,no_lens_shots_minus_prediction_db,no_lens_unit_norm_prediction_db_re_floor,with_lens_shots_median_db_re_floor,with_lens_operator_prediction_db_re_floor,with_lens_shots_minus_prediction_db,with_lens_unit_norm_prediction_db_re_floor,drive_norm,floor_db
+cos_p0,flat,0,36.3727,36.3071,0.0655681,27.2762,41.6707,41.5948,0.075957,32.5639,2.82843,0
+cos_p1,λ/6.5 (cos),23.8,18.9526,19.0829,-0.130332,13.0623,29.4626,29.3687,0.0939594,23.3481,2,
+sin_p1,λ/6.5 (sin),23.8,19.1053,18.9462,0.159067,12.9256,30.5517,30.4495,0.102183,24.4289,2,
+cos_p2,λ/13 (cos),47.6,13.7889,13.8418,-0.0529025,7.82121,20.56,20.484,0.0759124,14.4634,2,
+sin_p2,λ/13 (sin),47.6,13.3457,13.408,-0.0622847,7.38743,26.554,26.5628,-0.00881338,20.5422,2,
+cos_p3,λ/19.5 (cos),71.4,11.843,11.5563,0.286742,5.53568,25.4575,25.2783,0.179168,19.2577,2,
+sin_p3,λ/19.5 (sin),71.4,5.93224,5.69131,0.240926,-0.329289,17.3814,17.244,0.137458,11.2234,2,
+cos_p4,λ/26 (cos),95.2,10.6413,10.5273,0.114026,1.4964,23.3443,23.472,-0.127676,14.4411,2.82843,

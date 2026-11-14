@@ -1,0 +1,134 @@
+{
+  "status": "Exploratory, existing data already examined; not a retrospective preregistration",
+  "scope": "one lens installation; all sources real; B6 shares baseline B; source recordings previously analysed",
+  "reference_max_absolute_deviation": {
+    "A": {
+      "T16_meanH_max_absolute_deviation": 0.0,
+      "C9_singleH_max_absolute_deviation": 0.0
+    },
+    "B6": {
+      "T16_meanH_max_absolute_deviation": 0.0,
+      "C9_singleH_max_absolute_deviation": 0.0
+    },
+    "B": {
+      "T16_meanH_max_absolute_deviation": 0.0,
+      "C9_singleH_max_absolute_deviation": 0.0
+    }
+  },
+  "comparisons": {
+    "w9x5|real|A": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 10,
+      "overlapping_single_operator_error_ranges": 6,
+      "higher_for_all_81_pairs": 0
+    },
+    "w9x5|real|B6": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 9,
+      "overlapping_single_operator_error_ranges": 7,
+      "higher_for_all_81_pairs": 0
+    },
+    "w9x5|complex|A": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 6,
+      "overlapping_single_operator_error_ranges": 10,
+      "higher_for_all_81_pairs": 0
+    },
+    "w9x5|complex|B6": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 6,
+      "overlapping_single_operator_error_ranges": 10,
+      "higher_for_all_81_pairs": 0
+    },
+    "sigma5|real|A": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 6,
+      "overlapping_single_operator_error_ranges": 10,
+      "higher_for_all_81_pairs": 0
+    },
+    "sigma5|real|B6": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 7,
+      "overlapping_single_operator_error_ranges": 9,
+      "higher_for_all_81_pairs": 0
+    },
+    "sigma5|complex|A": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 5,
+      "overlapping_single_operator_error_ranges": 11,
+      "higher_for_all_81_pairs": 0
+    },
+    "sigma5|complex|B6": {
+      "lower_at_mean_H": 16,
+      "lower_for_all_81_single_operator_pairs": 5,
+      "overlapping_single_operator_error_ranges": 11,
+      "higher_for_all_81_pairs": 0
+    }
+  },
+  "knownH_forecast_RMS_ratio_median_by_session_estimator": {
+    "A|real": 3.999066609803187,
+    "A|complex": 2.602128687495467,
+    "B6|real": 6.088963898399074,
+    "B6|complex": 3.625309399078869,
+    "B|real": 2.4530976051869597,
+    "B|complex": 3.165502622983619
+  },
+  "knownH_empirical_covariance_forecast_RMS_ratio_median_by_session_estimator": {
+    "A|real": 0.8005847470862817,
+    "A|complex": 0.8596136883417592,
+    "B6|real": 1.7765081282716286,
+    "B6|complex": 1.6845717278277546,
+    "B|real": 1.4199708914410842,
+    "B|complex": 1.1923876164763973
+  },
+  "calibration_curve_profile_median_of_subset_medians": {
+    "A|real|w9x5|1": 0.5916808089017185,
+    "A|real|sigma5|1": 0.5114527272671361,
+    "A|complex|w9x5|1": 0.7531998601131619,
+    "A|complex|sigma5|1": 0.6515101976541933,
+    "A|real|w9x5|3": 0.577041461280756,
+    "A|real|sigma5|3": 0.4483449573511593,
+    "A|complex|w9x5|3": 0.7977799700636131,
+    "A|complex|sigma5|3": 0.6151647221615385,
+    "A|real|w9x5|9": 0.6598800071646469,
+    "A|real|sigma5|9": 0.47934183644626266,
+    "A|complex|w9x5|9": 0.9137521888175351,
+    "A|complex|sigma5|9": 0.6410735262773921,
+    "A|real|w9x5|end9": 0.6871913177330661,
+    "A|real|sigma5|end9": 0.514985208581737,
+    "A|complex|w9x5|end9": 0.9534727229585942,
+    "A|complex|sigma5|end9": 0.6173899940608298,
+    "B6|real|w9x5|1": 0.5897666689359681,
+    "B6|real|sigma5|1": 0.5352755596573028,
+    "B6|complex|w9x5|1": 0.7516543116136282,
+    "B6|complex|sigma5|1": 0.6546693067372937,
+    "B6|real|w9x5|3": 0.5810131248665316,
+    "B6|real|sigma5|3": 0.4687413371044005,
+    "B6|complex|w9x5|3": 0.8242566162222695,
+    "B6|complex|sigma5|3": 0.6326091718792459,
+    "B6|real|w9x5|9": 0.720898377755157,
+    "B6|real|sigma5|9": 0.5231057785166665,
+    "B6|complex|w9x5|9": 1.1277571850288444,
+    "B6|complex|sigma5|9": 0.6953133366098316,
+    "B6|real|w9x5|end9": 0.6575021917479553,
+    "B6|real|sigma5|end9": 0.4794594616249408,
+    "B6|complex|w9x5|end9": 1.0629041460227089,
+    "B6|complex|sigma5|end9": 0.7246526498028426,
+    "B|real|w9x5|1": 0.2821416906066313,
+    "B|real|sigma5|1": 0.22782446613571877,
+    "B|complex|w9x5|1": 0.4689398080334949,
+    "B|complex|sigma5|1": 0.398374330844804,
+    "B|real|w9x5|3": 0.18792572474544023,
+    "B|real|sigma5|3": 0.135074431936216,
+    "B|complex|w9x5|3": 0.43915930993304575,
+    "B|complex|sigma5|3": 0.3266775723105428,
+    "B|real|w9x5|9": 0.1449519831673616,
+    "B|real|sigma5|9": 0.08880467940713085,
+    "B|complex|w9x5|9": 0.4547400991256283,
+    "B|complex|sigma5|9": 0.3048520532786291,
+    "B|real|w9x5|end9": 0.14472736274968306,
+    "B|real|sigma5|end9": 0.08231673127321976,
+    "B|complex|w9x5|end9": 0.4452082531410143,
+    "B|complex|sigma5|end9": 0.2586464468938926
+  }
+}

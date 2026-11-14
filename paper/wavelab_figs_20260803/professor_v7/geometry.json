@@ -1,0 +1,26 @@
+{
+  "_provenance": "Transcribed constants, NOT a cmm export. Source: D:\\Projects\\cmm\\paper\\figures\\build_figures.py (cmm HEAD b82619f + working-tree edits, 2026-11-02) lines 157 and 208-211 (geometry dict: mic_theta_deg, mic_R_m, mic_R_arc, mic_span_deg; microphone geometry solved 2026-08-03 from 12 laser distances) and D:\\Projects\\cmm\\paper\\figures\\figures_v4.py lines 90-97 and 222 (ladder rungs, brief labels, scene constants). Ladder convention: FIGURE_PLAN_v4_20260902 section 1 'one ladder everywhere: m · k (rad/m) · half-period (mm) = 0/24/48/71/95 = inf/131/65/44/33'. Added 2026-11-03: lens_cell_pitch_mm = 27 from CODEX_PROMPT_FIG_NC_PASS section 3 (Baha's figure brief; not in any cmm export).",
+  "sound_speed_m_s": 343.0,
+  "design_frequency_hz": 400.0,
+  "wavelength_mm": 858.0,
+  "n_sources": 8,
+  "source_pitch_mm": 33.0,
+  "array_length_mm": 264.0,
+  "n_lens_cells": 10,
+  "lens_cell_pitch_mm": 27.0,
+  "mic_theta_deg": [29.0, 16.4, 10.5, -1.5, -10.7, -32.5],
+  "mic_R_m": [2.002, 2.415, 2.507, 2.465, 2.438, 2.449],
+  "mic_R_arc_m": 2.455,
+  "mic_span_deg": 61.5,
+  "ladder": {
+    "m": [0, 2, 4, 6, 8],
+    "k_rad_m": [0.0, 23.8, 47.6, 71.4, 95.2],
+    "k_label": ["0", "24", "48", "71", "95"],
+    "half_period_label_mm": ["\u221e", "131", "65", "44", "33"]
+  },
+  "modes": {
+    "order": ["cos_p0", "cos_p1", "sin_p1", "cos_p2", "sin_p2", "cos_p3", "sin_p3", "cos_p4"],
+    "label": ["flat", "131 cos", "131 sin", "65 cos", "65 sin", "44 cos", "44 sin", "33 cos"],
+    "k_rad_m": [0.0, 23.8, 23.8, 47.6, 47.6, 71.4, 71.4, 95.2]
+  }
+}

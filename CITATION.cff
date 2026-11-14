@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Cite the published Zenodo version after release. This DOI is currently reserved for a draft."
+type: software
+title: "Code and data for: Resonant enhancement and source priors shape subwavelength acoustic reconstruction"
+version: 1.0.0
+doi: 10.5281/zenodo.24221204
+url: https://github.com/wavelabnu/acoustic-metalens-source-recovery
+repository-code: https://github.com/wavelabnu/acoustic-metalens-source-recovery
+authors:
+  - family-names: Rysmambetov
+    given-names: Nurtugan
+    affiliation: "Department of Physics, Nazarbayev University; Robotics Center, ISSAI, Astana, Kazakhstan"
+  - family-names: Kappassov
+    given-names: Zhanat
+    affiliation: "Department of Robotics, Nazarbayev University; Robotics Center, ISSAI, Astana, Kazakhstan"
+  - family-names: Orazbayev
+    given-names: Bakhtiyar
+    orcid: https://orcid.org/0000-0002-3597-1873
+    affiliation: "Department of Physics, Nazarbayev University; Robotics Center, ISSAI, Astana, Kazakhstan"
+keywords:
+  - acoustic metamaterials
+  - resonant metalens
+  - subwavelength imaging
+  - inverse problems
+  - source priors

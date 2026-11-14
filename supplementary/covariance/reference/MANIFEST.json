@@ -1,0 +1,45 @@
+{
+ "release": "C10",
+ "decision": "#101",
+ "status": "exploratory desk verification on frozen EXP 06 data; not a preregistration",
+ "run_utc": "2026-11-09T13:04:47+00:00",
+ "code": {
+  "path": "analysis/desk/c10_gap_verification.py",
+  "sha256": "2ef3ef682d5d1b84aa5ab8281f0b21bc7db79eca02acd8b55db52d0663140365",
+  "git_blob_normalized": "22fed132a293d56cb28dda5aaee6eb7b91d950d7",
+  "git_branch": "c10-gap-verification-20261109",
+  "git_commit": "815900c1d5823f2e81f02a47f3f7d61bef1447ca",
+  "script_uncommitted_changes": false
+ },
+ "inputs_sha256": {
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\figures\\v7_caption_cleanup_20261103\\analysis_releases_20261105\\release_T16\\transfer16.npz": "ec8ffbb91eaa8863cff0a9ec620cb731ef1125669677bda01ff1d841fff29c4b",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\figures\\v7_caption_cleanup_20261103\\analysis_releases_20261105\\release_C9\\fig06_cal9.npz": "c74a44d166e31f0b8476ca3da6e0384258ee23c1a008de75f3f9c70da2e37e05",
+  "C:\\Users\\Bakhtiyar\\exp06_cache\\A.npz": "91ef8e08126bc27ba3215c1aa558f8e94a0d28cfd3cf68c25b869f0cdca62ecf",
+  "C:\\Users\\Bakhtiyar\\exp06_cache\\B.npz": "5038a86c00ef089f919d176b31e5cab2116fdb2a3fd92cfb6ed7c944dce15d71",
+  "C:\\Users\\Bakhtiyar\\exp06_cache\\B6.npz": "dbb14ff57afd105cd11fe7b4b441552d915bcbbea7bc275eea257bad9960b3c0",
+  "C:\\Users\\Bakhtiyar\\exp06_cache\\A_ladder.npz": "a1fba86c6e0dd4111f2e8f395804a6e29d13b5a65485a45330469ca74c76ea6d",
+  "C:\\Users\\Bakhtiyar\\exp06_cache\\B_ladder.npz": "03cc971af3fdff94d0dd036ee2a5c1c22653a85b592301631fb92777361681ed",
+  "C:\\Users\\Bakhtiyar\\exp06_cache\\B6_ladder.npz": "86661fa4c86babc402bc849fe5e5be9812f94de74d6ccd1cec65b715d6c01d92",
+  "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_A_nolens.npz": "d0efdc52aa635e01b614c67c342cb30ffccc90e648fb9db587ce2a4f780dedb3",
+  "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_B_withlens.npz": "57bb3e106ad398a4313962298fb348cdfe83966e96ba7c02aeb2b0863ffeab5e",
+  "D:\\Projects\\cmm\\analysis\\export_nurtugan\\images_B6_nolens.npz": "8934d9b0d2b1a1f3fd9bb60608bfc425a6c98a959f7c771ae08e1f5e52d41993",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\output\\nc_strengthening_20261109\\results.npz": "e7dec1c5d0bdcb640ffb454fb699ae9676c07d6a311ad8f1ae7aff74718ecebb",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\output\\nc_strengthening_20261109\\summary.json": "427f1f315db2c2910ce16b023477c1c07b518959235c18fa9140d99f2651ab20",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\output\\nc_strengthening_20261109\\knownH_noise_forecast.csv": "8fbc12d68f6a43067fc8be3a1b0eb82fccc534004e91b85265f791d42dc42de5",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\output\\nc_strengthening_20261109\\calibration_comparisons.csv": "01e5fbd9dec0872349e30a2fb621fa8ed2f0178b04753dc2168143089f3a1b36",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\output\\nc_strengthening_20261109\\per_operator.csv": "33d3e07eea76e32f4838e2613706a2589d895bbc88b7fc889d7d8cb840f83404",
+  "D:\\GDrive Lab\\01_Projects\\Imaging_Localization\\Acoustic_subwavelength_imaging\\Resolution_limit_NN_vs_analytic\\output\\nc_strengthening_20261109\\analysis_specification.json": "5d28d612ea73fba6c82f579c71ea9ba7874cd8052807843088dd1a37b3ffa838"
+ },
+ "outputs_sha256_deterministic": {
+  "c10.npz": "33548bf1118ef3c31f5f1a417bbb5c967594da977653032ec4561e27f478b76a",
+  "c10.json": "e4d2fc54ae6b122faf25855d367ef003afd9be1242bdf5520d25541fc4fab264",
+  "c10_forecast_per_profile.csv": "d90732d1d639730aa7271f9f4736ef83606d19d9f76cc9e91f5b3ab29ad643ba",
+  "c10_calibration_curves_per_profile.csv": "404de00ff403c7ec15cfa21ed4ed4d1a4abe47ae5629ad4520a321119ba9d376"
+ },
+ "documents_sha256_at_run": {
+  "CAPTION_DELTA.md": "77a45b95abeda2448acd79b56a8fac74ba029fb606bebe97da44505bfa59a618",
+  "STATUS_C10.md": "020520d900cacc43fd176742b19ec1a2c3ce32a76757dc6354a683668e554014",
+  "SVERKA_C10.md": "bbc22fa45ef429bca0a16a7b99a10700aa70f87abac39bb236eed99d67143279"
+ },
+ "rerun_gate": "rerun reproduces the four deterministic outputs byte for byte"
+}

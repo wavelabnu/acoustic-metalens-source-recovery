@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+tmp/
+dist/
+desktop.ini
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz

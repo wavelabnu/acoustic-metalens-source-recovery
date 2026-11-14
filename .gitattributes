@@ -1,0 +1,7 @@
+* -text
+*.py linguist-language=Python
+*.npz binary
+*.npy binary
+*.pt binary
+*.pdf binary
+*.zip binary

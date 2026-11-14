@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-12T21:28:16.923138+00:00",
+  "source_commit": "03060a5b5edaaf2fb0a7132aea0e8dfb7713e99f",
+  "source_tree_dirty": false,
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "dependencies": {
+    "numpy": "2.3.4",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7",
+    "torch": "2.9.0",
+    "pytest": "9.0.3"
+  },
+  "doi": null,
+  "license_file_included": false,
+  "checkpoint_count": 18,
+  "scope": "Current main and Supplement only; 12 Figure 5 and 6 Note 14 checkpoints",
+  "payload": "data",
+  "repository": "https://github.com/Nurtugann/metalens-direct",
+  "paired_archive": "metalens-direct-code.zip"
+}

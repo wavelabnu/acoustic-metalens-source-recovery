@@ -1,0 +1,13 @@
+group,arm,estimator,x,y,shown_profile_relative_error
+model,nolens,none,1.0497,0.520077,0.341172
+model,nolens,correct,1.00803,0.818039,0.128791
+model,nolens,wrong,1.0983,-0.541021,1.09188
+model,withlens,none,1.04187,0.871347,0.0956679
+model,withlens,correct,1.02842,0.883472,0.0848126
+model,withlens,wrong,0.96136,0.483067,0.366547
+measured,nolens,none,-0.00901244,0.496349,0.210034
+measured,nolens,correct,-0.022009,0.722759,0.0540571
+measured,nolens,wrong,-0.00314642,-0.0321492,0.585874
+measured,withlens,none,0.0353145,0.765084,0.0386238
+measured,withlens,correct,0.0323625,0.761862,0.0355917
+measured,withlens,wrong,0.0935746,0.610514,0.228053

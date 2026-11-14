@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acoustic-metalens-source-recovery"
+version = "1.0.0"
+description = "Code and data for resonant enhancement and source priors in subwavelength acoustic reconstruction"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "matplotlib"]
+
+[project.optional-dependencies]
+neural = ["torch>=2.9"]
+test = ["pytest>=8"]
+figure-review = ["PyMuPDF==1.28.0"]
+notebook = ["ipywidgets>=8.1,<9", "ipykernel>=6", "jupyterlab>=4,<5", "pandas>=2"]
+
+[tool.setuptools.packages.find]
+include = ["direct"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

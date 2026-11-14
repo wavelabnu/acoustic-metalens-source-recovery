@@ -1,0 +1,7 @@
+mic_y_lambda,mic_x_lambda,abs_dp_over_sigma_nolens_tb,filled_nolens_tb,abs_p_s1_over_sigma_nolens_tb,abs_dp_over_sigma_lens_tb,filled_lens_tb,abs_p_s1_over_sigma_lens_tb,tone_t_b,f_over_f0,d2_share_lens_t_b,drawn,sigma,compression,convention,camera,field_grids
+-3,-5.18,0.000379027,0,90.2684,31.0665,1,36.5102,11,1.03158,0.879513,"Re(p(s1) - p(s2)) / sigma on the model's plane at t_b, key field_{arm}_tb_delta_total_re_over_sigma; inset key field_{arm}_tb_s1_total_re_over_sigma","sigma_n_nolens, the rms of the complex recording noise, E|n|^2 = sigma^2, both arms","asinh(v), v in sigma, limits +-300 sigma, the same in all panels; contours at +-1 sigma","filled marker: |dp|/sigma >= 1 at this tone, a drawing convention, not a criterion","pinhole at (-1.6, -1.2, 1.1), target (2.0, 0.1, 0.0), lambda0; X from the source line toward the microphones","pointer: analysis release A3, fig01_pair_fields.npz, sha256 39f9a79503cc1919329958ac728e45cf007e8750835050715f35ed5310bdf48b; the arrays drawn are copied unchanged into data/fig01_pair_fields_extract.npz"
+-1.8,-5.18,0.000606012,0,100.61,22.4437,1,37.8804,,,,,,,,,
+-0.6,-5.18,0.000439509,0,107.616,8.36193,1,34.888,,,,,,,,,
+0.6,-5.18,0.000439509,0,107.616,8.36193,1,26.6252,,,,,,,,,
+1.8,-5.18,0.000606012,0,100.61,22.4437,1,15.7929,,,,,,,,,
+3,-5.18,0.000379027,0,90.2682,31.0665,1,6.43547,,,,,,,,,

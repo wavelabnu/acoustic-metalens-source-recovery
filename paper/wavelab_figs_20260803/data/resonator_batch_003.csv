@@ -1,0 +1,35 @@
+# Impedance-tube characterization of 3D-printed Helmholtz resonator batch 003.
+# Four-microphone tube, two-source scattering matrix method (ASTM E2611),
+# reference-calibrated transmission normalization.  f0 from the |S21| dip,
+# Historical Q values are retained for archival provenance only. Their extraction
+# procedure is unverified; they are excluded from manuscript claims, figures
+# and the published model calibration. Numerical rows are preserved unchanged.
+# Published uses of this table are the recorded f0 values and mounted IDs.
+# "selected" identifies mounted elements; no Q-based selection rule is claimed.
+#
+# Design nominal of the batch, and the frequency the model's f = 1 stands for.
+# Parsed by resonator_batch.py, so consumers normalize by data rather than by a
+# literal 400.0 typed at the call site.
+#: nominal_f0_hz = 400.0
+resonator,f0_hz,Q,selected
+1,397.5,15.5,0
+2,394.5,14.6,0
+3,399.5,16.0,0
+4,398.5,15.9,0
+5,398.5,16.8,1
+6,402.5,17.4,1
+7,403.5,16.0,0
+8,399.5,15.9,0
+9,400.5,15.9,0
+10,399.5,15.3,0
+11,399.5,16.5,1
+12,395.5,16.3,0
+13,400.5,16.6,1
+14,403.5,16.6,1
+15,400.5,15.3,0
+16,403.5,16.7,1
+17,402.5,16.7,1
+18,396.5,15.3,0
+19,404.5,17.4,1
+20,400.5,16.7,1
+21,402.5,16.6,1

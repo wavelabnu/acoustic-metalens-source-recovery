@@ -1,0 +1,128 @@
+{
+  "source": "Frozen EXP06 A/B raw recordings on shared cmm Drive; 20 separately recorded shots",
+  "method": "2*rfft(data,axis=1)/51200 at the 41 integer-Hz bins; no averaging or background subtraction in this archive; sort by sequence filename, not rep label",
+  "sampling_hz": 51200,
+  "samples_per_record": 51200,
+  "inputs": [
+    {
+      "group": "A_sin_p2",
+      "file": "seq_090_rep_02.npy",
+      "drive_id": "1RPvy5GpMkIxmIt8OekXlYpfJshZJtIsh",
+      "sha256": "8fba2097b52338f7f25a7405a93aaf80ccda8807d8f9e22a3864bdaf5047f397"
+    },
+    {
+      "group": "A_sin_p2",
+      "file": "seq_086_rep_01.npy",
+      "drive_id": "1z4ajLfU-rr8EGDHLYgnOispKPMslnfDb",
+      "sha256": "3ac1c9514510d2a4604d4a81bc75b4eb255df88ca56950060810ff36b5f75af3"
+    },
+    {
+      "group": "A_sin_p2",
+      "file": "seq_095_rep_04.npy",
+      "drive_id": "1GozZM2smGfPw6MNZb4gK_HZi9VqYKuC3",
+      "sha256": "2effcb1d1c1f515f3d8ba02c566d23fd99e32506b5951a60d4600be6df918edb"
+    },
+    {
+      "group": "A_sin_p2",
+      "file": "seq_092_rep_00.npy",
+      "drive_id": "15caSq99MwmuKFP5z0i291YeVDF6lOcUm",
+      "sha256": "a431cb9fab63905eb946bfc9e3d3892977cd4e8777799f1504fe882107194202"
+    },
+    {
+      "group": "A_sin_p2",
+      "file": "seq_089_rep_03.npy",
+      "drive_id": "1R3xhlOmCIn_jzH20dpWUV7GKGwFWFyJs",
+      "sha256": "d3133925fe77e41e95b9b2a818bcaa932b8beb163fea51b90fdbcb5ba8f53ed5"
+    },
+    {
+      "group": "B_sin_p1",
+      "file": "seq_106_rep_04.npy",
+      "drive_id": "1lcBeIejktVNViaLUeySPybp8MKZ67G1M",
+      "sha256": "9e3d8f5dd498eb8ab1e641ed20356d3e3f417b020976c40c2c23dfe45b3735a5"
+    },
+    {
+      "group": "B_sin_p1",
+      "file": "seq_087_rep_01.npy",
+      "drive_id": "15HHqeh7bitmUzhahqEVYEjcsRWm8NmNZ",
+      "sha256": "16a4e141ae20cdea66e9f658ca29bb1670da5b292a6b1583d51dbfdbb60f4f8b"
+    },
+    {
+      "group": "B_sin_p1",
+      "file": "seq_097_rep_00.npy",
+      "drive_id": "1zxDclBGXgQCBbGVy2SKJMiL0jgAzMtsm",
+      "sha256": "83cc396a8451108a01f53ad11a2c38c8b533ab903e6ccdc8f72b9f483d865dbf"
+    },
+    {
+      "group": "B_sin_p1",
+      "file": "seq_102_rep_03.npy",
+      "drive_id": "10RglYA76qmKg6G2FCJx6rVvu-zAwYJrr",
+      "sha256": "d5f3347783b13670ee3250ec55a89361ebd1b01164e95af6c3fe439fae4fbc75"
+    },
+    {
+      "group": "B_sin_p1",
+      "file": "seq_116_rep_02.npy",
+      "drive_id": "1Q74NXZVNjfoUMPao5f5Eiolnnl38UMmf",
+      "sha256": "d91545150da54f378527b805666ab03e8025a8a6e2e018ca0c14f9e19cda9aa2"
+    },
+    {
+      "group": "A_sin_p1",
+      "file": "seq_104_rep_04.npy",
+      "drive_id": "1ShY1Eb6xcM-_G1j2nZ4ZOOTEe1qLhyXU",
+      "sha256": "263edac6338578f8656c9a61224c5645afd605108d281f62ba2590fa5a8cd587"
+    },
+    {
+      "group": "A_sin_p1",
+      "file": "seq_103_rep_00.npy",
+      "drive_id": "1e8bYEvlo33onl9uz-lO9Vwmu9_vLYHPs",
+      "sha256": "11d1dbbfb1b28713abf176bb8572ef982fc88737d9c497242127f5746cdcf199"
+    },
+    {
+      "group": "A_sin_p1",
+      "file": "seq_085_rep_02.npy",
+      "drive_id": "1kOHPQ2ckgCwx0p8CcGk2Lk7f0D2cz1Bi",
+      "sha256": "c6acebc40523b2c3b23db5f2111ee4326dbef2285e7263528cf300e4fb3af217"
+    },
+    {
+      "group": "A_sin_p1",
+      "file": "seq_088_rep_03.npy",
+      "drive_id": "1vMqmUqgxsAQkQ6-N-rVGEZ7DPjzMnG3I",
+      "sha256": "ae921bfc3bbd5a8ca65339d5102f9f36c8d0ce5cbb9d931235983a25d0fa2b3c"
+    },
+    {
+      "group": "A_sin_p1",
+      "file": "seq_094_rep_01.npy",
+      "drive_id": "1cS5t6Pmwygc8ryLjLQV8QXgg7kV43lph",
+      "sha256": "dddc96d0536dd6d2c5ac7eba599fe8412d87e86dc21329b68b524c68ed831971"
+    },
+    {
+      "group": "B_sin_p2",
+      "file": "seq_090_rep_00.npy",
+      "drive_id": "1dxFsYEbFtVIbLmChoanazEWEp2yKLfKp",
+      "sha256": "d5b65768ba41d84dd603d186ff5bf3e14c3f7ac8b4f571cafdadd4a71f4d90e0"
+    },
+    {
+      "group": "B_sin_p2",
+      "file": "seq_107_rep_04.npy",
+      "drive_id": "15WjXSUI9EbTBscxKFOV97fmuLh1HgZvV",
+      "sha256": "7afb657d65915a046c8e1f4a2731a656b3a29d3ff9fe8bdfbd78f3dee1645281"
+    },
+    {
+      "group": "B_sin_p2",
+      "file": "seq_088_rep_03.npy",
+      "drive_id": "1HEAfZbaOs6X5lrHSYodo8tFNCkmxNRbH",
+      "sha256": "c57475d4e516d97888a3699c8e5a3de57a05a05e33330bf0fb51433a69d64ddf"
+    },
+    {
+      "group": "B_sin_p2",
+      "file": "seq_093_rep_02.npy",
+      "drive_id": "1YmEoD36t3R6asrRXp3o6EN5bYlCgB_6F",
+      "sha256": "fec0d36c25a35f98d6922b8ef8c15a5978280f0205e649efd52cb564abc5cc5b"
+    },
+    {
+      "group": "B_sin_p2",
+      "file": "seq_119_rep_01.npy",
+      "drive_id": "1jOXlHzvSAqcWe0vx62VWLuqZ6waOT_QY",
+      "sha256": "6ff127e5b785a2418eda124df6c72322f7290c9001f9c5dfa6d47165a3be6532"
+    }
+  ]
+}

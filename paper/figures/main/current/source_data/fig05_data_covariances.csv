@@ -1,0 +1,17 @@
+group,arm,i,j,covariance,data_centre,truth
+model,nolens,0,0,0.015439,1.0497,1
+model,nolens,0,1,-0.041731,1.0497,1
+model,nolens,1,0,-0.041731,0.520077,1
+model,nolens,1,1,0.507596,0.520077,1
+model,withlens,0,0,0.0109567,1.04187,1
+model,withlens,0,1,0,1.04187,1
+model,withlens,1,0,0,0.871347,1
+model,withlens,1,1,0.0547161,0.871347,1
+measured,nolens,0,0,0.0078803,-0.00901244,-0.00529267
+measured,nolens,0,1,-0.00334226,-0.00901244,-0.00529267
+measured,nolens,1,0,-0.00334226,0.496349,0.788877
+measured,nolens,1,1,0.213648,0.496349,0.788877
+measured,withlens,0,0,0.00094323,0.0353145,-0.00529267
+measured,withlens,0,1,-0.00098881,0.0353145,-0.00529267
+measured,withlens,1,0,-0.00098881,0.765084,0.788877
+measured,withlens,1,1,0.0069376,0.765084,0.788877
