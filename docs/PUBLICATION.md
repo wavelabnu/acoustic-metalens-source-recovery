@@ -1,4 +1,4 @@
-# Publication handoff
+# Publication handoff — manuscript edition 4
 
 GitHub: <https://github.com/wavelabnu/acoustic-metalens-source-recovery>
 
@@ -22,6 +22,6 @@ Suggested availability text, **for use only after publication**:
 > supporting this study are archived at https://doi.org/10.5281/zenodo.24221204
 > (version 1.0.0). The code repository is
 > https://github.com/wavelabnu/acoustic-metalens-source-recovery. The deposit
-> includes eighteen prior-network checkpoints; the catalogue control includes
-> measured inputs, frozen classifications and a retraining recipe. Other raw
-> time series are available from the corresponding author on reasonable request.
+> includes eighteen prior-network checkpoints and the inputs for the rank and
+> covariance sensitivity checks. Other raw time series are available from the
+> corresponding author on reasonable request.

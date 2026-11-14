@@ -3,8 +3,8 @@
 Companion materials for **Resonant enhancement and source priors shape
 subwavelength acoustic reconstruction**, by **Nurtugan Rysmambetov, Zhanat
 Kappassov and Bakhtiyar Orazbayev**. Prepared version **1.0.0** follows the
-final 14 November 2026 submission: five main figures, nine supplementary
-figures and Supplementary Notes 1–17.
+14 November 2026 submission, **manuscript edition 4** (decision 117): five
+main figures, eight supplementary figures, Supplementary Notes 1–16 and one table.
 
 - GitHub: <https://github.com/wavelabnu/acoustic-metalens-source-recovery>
 - Reserved Zenodo DOI: **10.5281/zenodo.24221204**.
@@ -16,20 +16,19 @@ figures and Supplementary Notes 1–17.
 | Path | Contents |
 |---|---|
 | `direct/` | Acoustic model and reconstruction estimators |
-| `paper/scripts/`, `paper/checks/` | Fourteen figure builders, numerical audit and archive tools |
+| `paper/scripts/`, `paper/checks/` | Thirteen figure builders, numerical audit and archive tools |
 | `paper/figures/main/current/source_data/` | Source Data for Figures 1–5 |
 | `paper/wavelab_figs_20260803/` | Reduced measurements, model inputs, geometry and forty raw waveforms |
 | `notebooks/models/` | Eighteen original prior-network checkpoints and validation records |
-| `supplementary/catalogue/` | All 210 catalogue test phasors, operators, noise scales, saved predictions and acquisition hashes |
 | `supplementary/covariance/` | C10 analysis, complete input closure and reference outputs for Note 16 |
-| `supplementary/source_data/` | Catalogue-separation and rank-sensitivity tables |
-| `supplementary/original_analysis/` | Original catalogue analysis dependencies and U-Net implementation |
+| `supplementary/source_data/` | Rank-sensitivity table |
 | `paper/main.*`, `paper/supplement.*` | Final manuscript and Supplement used by the numerical audit |
-| `manuscript/overleaf_project_20261114.zip` | Unchanged final author-supplied LaTeX project |
+| `manuscript/overleaf_project_20261114.zip` | Unchanged author-supplied edition-4 LaTeX project |
 | `provenance/` | Original archive checksums and source records |
 | `REPRODUCTION_REPORT.json` | Actual validation environment, outcomes and limits |
 
 See `deposit/README.md` for the figure-to-data map and array conventions.
+The manuscript snapshot is the preserved edition 4 selected by the authors.
 The `paper/` sources preserve the final text with remapped figure paths;
 supplied PDFs are unchanged final submission files. Author-only submission
 fields remain the authors' responsibility.
@@ -66,8 +65,7 @@ python -B supplementary/check_supplement.py
 
 The input checker verifies forty acquisition hashes and FFT reductions and
 reproduces Figure 2a's seeded noise-only band. The supplementary checker
-reclassifies the measured catalogue, recomputes its separations, audits all
-six saved network prediction arrays and reconstructs the rank table.
+reconstructs the rank-sensitivity table from the frozen complex returns.
 
 Repeat Note 16's covariance analysis and compare its numerical fields:
 
@@ -76,7 +74,7 @@ python -B supplementary/covariance/c10_gap_verification.py --out tmp/covariance
 python -B supplementary/check_supplement.py --covariance-dir tmp/covariance
 ```
 
-Regenerate all fourteen figures, or only the five main figures:
+Regenerate all thirteen figures, or only the five main figures:
 
 ```text
 python -B paper/scripts/figures.py
@@ -95,17 +93,9 @@ python -B notebooks/train_nn_prior_plane.py --current-figure
 python -B notebooks/train_nn_prior_plane.py
 ```
 
-These overwrite the respective study's weights and records. The original
-catalogue analysis did **not** save its six U-Net weights. Its predictions,
-measured tests, confusion matrices and recipe are supplied. To train new,
-separately labelled runs, saving new weights under `tmp/catalogue_retraining/`:
-
-```text
-python -B supplementary/retrain_catalogue.py --arm both --seeds 0 1 2
-```
-
-Training is optional and can be expensive. No new training was substituted
-for the paper's original results; exact trained weights vary across platforms.
+These overwrite the respective study's weights and records. Training is
+optional; the eighteen original checkpoints are already supplied. Exact
+trained weights can vary across platforms.
 
 ## Build the sharing archives
 
@@ -126,14 +116,11 @@ Microphone outputs are complex instrument phasors, not pascals. Calibration
 repeats are averaged in the compact EXP 06 exports; C10 inputs also preserve
 individual calibration/baseline phasors. Baseline and test repeats remain
 separate. The repeat without the lens reuses the lens session's background.
-The catalogue and profile sessions are distinct acquisitions.
 
 Only forty raw waveforms are distributed. Other raw time series, complete
 impedance-tube acquisitions and verified installed-resonator CAD are absent.
 The exact noisy Figure 2c profiles remain frozen: their original producer
-was not located, while their RMS expectations are recalculated. The profile-
-session catalogue distance/bootstrap remains a frozen diagnostic. The six
-original catalogue network states are unavailable, as explained above.
+was not located, while their RMS expectations are recalculated.
 
 Original prior checkpoint bytes and fingerprints are unchanged. For SVD
 roundoff across environments, loaders additionally compare recorded numerical

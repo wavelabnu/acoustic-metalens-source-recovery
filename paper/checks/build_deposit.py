@@ -21,6 +21,14 @@ import zipfile
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = ROOT / "dist"
 MODEL_ROOT = pathlib.Path("notebooks/models")
+MANUSCRIPT_EDITION = 4
+RETIRED_PATHS = (
+    "supplementary/catalogue", "supplementary/original_analysis",
+    "supplementary/retrain_catalogue.py", "supplementary/make_figS_catalogue.py",
+    "supplementary/source_data/catalogue_predictions.csv",
+    "supplementary/source_data/figS_separability.csv",
+    "paper/figures/supplement/figS_catalogue_separation.pdf",
+)
 REQUIRED_FILES = (
     "README.md", "pyproject.toml", "requirements-repro.txt", "conftest.py",
     "deposit/README.md", "paper/main.tex", "paper/main.pdf",
@@ -114,6 +122,9 @@ def checkpoint_paths(root: pathlib.Path) -> set[pathlib.Path]:
 
 def selected_files(root: pathlib.Path = ROOT) -> list[pathlib.Path]:
     root = root.resolve()
+    retired = [name for name in RETIRED_PATHS if (root/name).exists()]
+    if retired:
+        raise ValueError("Withdrawn manuscript-section files remain:\n" + "\n".join(retired))
     relative = {pathlib.Path(name) for name in REQUIRED_FILES}
     relative.update(pathlib.Path(name) for name in SOURCE_FILES)
     relative.update(MODEL_ROOT / name for name in MODEL_RECORDS)
@@ -200,9 +211,10 @@ def release_metadata(root: pathlib.Path, files: list[pathlib.Path]) -> dict:
         "dependencies": versions, "doi": None,
         "reserved_doi": "10.5281/zenodo.24221204", "version": "1.0.0",
         "publication_status": "draft", "license_status": "pending_author_approval",
+        "manuscript_edition": MANUSCRIPT_EDITION,
         "license_file_included": (root / "LICENSE").is_file(),
         "checkpoint_count": sum(p.suffix == ".pt" for p in files),
-        "scope": "Final 14 November 2026 manuscript; 5 main and 9 supplementary figures; 18 retained prior checkpoints; catalogue predictions and retraining recipe",
+        "scope": "14 November 2026 manuscript, edition 4; 5 main and 8 supplementary figures; 16 Supplementary Notes and 1 table; 18 retained prior checkpoints",
     }
 
 
@@ -210,7 +222,7 @@ def payload_role(path: pathlib.Path, root: pathlib.Path = ROOT) -> str:
     """Data include manuscript/figure PDFs, measured/model exports and weights."""
     relative = path.relative_to(root).as_posix()
     if (relative.startswith(("paper/wavelab_figs_20260803/", "notebooks/models/",
-                            "paper/figures/", "supplementary/catalogue/",
+                            "paper/figures/",
                             "supplementary/covariance/inputs/", "supplementary/covariance/reference/",
                             "supplementary/source_data/", "manuscript/")) or path.suffix == ".pdf"
             or relative == "deposit/README.md"):

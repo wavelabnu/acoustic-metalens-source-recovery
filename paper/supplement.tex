@@ -156,12 +156,6 @@ $v_5$ and $v_7$ used in Note~14. Main-text Fig.~5 instead uses the model with-le
 \end{figure}
 \clearpage
 
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{figures/supplement/figS_catalogue_separation.pdf}
-\caption{\label{figS:catalogue_separation}Calibrated separation of the $21$-configuration catalogue. The minimum normalized response distance $d_{\min}$ uses the independent proper-complex Gaussian noise convention defined in Supplementary Note 17. The catalogue-session values, $63.8$ without the lens and $172.3$ with it, belong to the acquisition scored by both catalogue classifiers. The separate no-lens calibration from the profile sessions gives $40.5$; its bar is the retained within-session $95\%$ bootstrap interval, $37.1$--$66.2$, rather than variation over independent installations. The dashed $6.6$ reference is the rounded sufficient union-bound requirement for at most one expected error in $105$ classifications under the stated exact-template noise model. It is not an empirical detection threshold. Classification counts are given separately in Supplementary Table~\ref{tab:catalogue_accuracy}.}
-\end{figure}
-\clearpage
 
 \begin{table}[p]
 \centering
@@ -200,21 +194,6 @@ $\lambda/26$ cosine & With lens & 6 & $0.55$ & $[0.49, 0.56]$ & $9/9$ \\
 \end{table}
 \clearpage
 
-\begin{table}[p]
-\centering
-\caption{\label{tab:catalogue_accuracy}Separate finite-catalogue acquisition and calibration check. Classification counts use $21$ configurations with five recorded repetitions in each arm of the catalogue sessions. Distances use the frozen diagonal-noise convention of equation~\eqref{eq:supp_catalogue}. Dashes indicate that the separate profile-session calibration supplies a distance but no classification count in this table. The recordings share calibration and background within a session.}
-\setlength{\tabcolsep}{5pt}
-\begin{tabular}{llrcc}
-\toprule
-Sessions & Arm & $d_{\min}$ & Matched filter & U-Net (seed 0)\\
-\midrule
-Catalogue & No lens & $63.8$ & $105/105$ & $105/105$\\
-Catalogue & With lens & $172.3$ & $105/105$ & $105/105$\\
-Profile & No lens & $40.5$ & --- & ---\\
-\bottomrule
-\end{tabular}
-\end{table}
-\clearpage
 
 \section*{Supplementary Information}
 \label{sec:supp}
@@ -222,7 +201,7 @@ Profile & No lens & $40.5$ & --- & ---\\
 These Notes provide the model details and experimental controls supporting the main comparisons. Some controls use type-II discrete cosine transform (DCT-II) probes and an empirical relative spectral cut, whereas main-text Fig.~3 uses the acquired Fourier ladder and applies a baseline-normalized floor rule in its reconstruction calculation. Main-text Figs.~2--4 share one reconstruction score, RMS relative profile error $E_{\rm prof}$, and one tolerance, $E_{\rm prof}\le1/\sqrt2$. We state the source, averaging and error convention where each control is introduced.
 
 Main-text Fig.~2b plots root-mean-square (RMS) amplitude errors at a fixed budget. Main-text Fig.~3c plots the budget required to meet a chosen RMS tolerance, rather than amplitude-error values. Both use their stated white-noise models. Main-text Fig.~4b separates observed scalar errors from a bound under an assumed complete recording-error norm. The prior and network examples in Notes 14--15 are
-separate controls. Note 16 reports a noise-covariance sensitivity check with a separate estimator, and Note 17 a finite-catalogue identification test from a separate acquisition.
+separate controls. Note 16 reports a noise-covariance sensitivity check with a separate estimator.
 
 \subsection*{Supplementary Note 1. The coupled-dipole model}
 
@@ -680,29 +659,6 @@ With circular-diagonal noise, the factors are $4.00$, $6.09$ and $2.45$ for the 
 These covariance estimates have rank at most eight and use only background recorded before calibration. They do not validate the noise law during the driven recordings. One estimator direction carries $87$--$98\%$ of the empirical propagated noise trace. Omitting the three background recordings with the largest contributions changes the factors to $2.40$, $2.91$ and $2.09$; this selection is based on the observed contributions and measures concentration rather than supplying an independent validation. The covariance predicts the recording-to-recording spread to within about a factor $1.5$, while the error persisting in the five-recording mean is consistent with omitted background-mean and calibration terms. The calibration term is only an upper bound because the calibration scatter also contains drive variation. This is not a causal decomposition of reconstruction error.
 
 For the separate per-recording baseline weighting used by the recorded-profile reconstructions, the corresponding real-ridge factors are smaller: $1.29$, $2.32$ and $1.45$ under the circular-diagonal law, and $0.83$, $1.57$ and $1.35$ with empirical correlations, in the same session order. Each factor averages squared errors over nine weightings of five recordings before forming the profile-wise RMS ratio. The weighting and covariance reuse the same background recordings. Neither set of factors is a correction factor for the complex TSVD thresholds or the available-budget lines in main-text Fig.~3. Those lines retain their stated diagonal-noise normalization.
-
-\clearpage
-\subsection*{Supplementary Note 17. A measured finite-catalogue control}
-
-The catalogue recordings come from two separate catalogue sessions, one without and one with the lens (acquisition identifiers \texttt{exp04\_count\_nolens\_20260806\_a} and \texttt{exp04\_count\_withlens\_r4\_20260806\_a}). They are not the profile-session recordings used in main-text Figs.~3--5. Each arm has its own measured calibration operator over $41$ tones and six microphones, and its own source-off baseline. The candidate drive vectors are the eight unit single-source indicators, seven adjacent-pair indicators and six adjacent-triple indicators. Active entries equal one, inactive entries zero; amplitudes and relative phases are fixed. There are five recorded test repetitions per candidate, $105$ per arm. Both classifiers receive the same background-subtracted test recordings within each arm. The matched filter is a post-acquisition control.
-
-For candidate $c$, let $h_c=H\mathbf a_c$. With $D_\sigma=\operatorname{diag}(\sigma^{\rm cat}_{km})$, the catalogue-filter decision is
-\begin{equation}
- \hat c=\underset{c\in\{1,\ldots,21\}}{\operatorname{argmin}}\,
- \|D_\sigma^{-1}(\mathbf y-h_c)\|^2,\qquad
- d_{cc'}=\sqrt2\|D_\sigma^{-1}(h_c-h_{c'})\|.
- \label{eq:supp_catalogue}
-\end{equation}
-The retained baseline scale is $(\sigma^{\rm cat}_{km})^2=n_b^{-1}\sum_{b=1}^{n_b}|b_{km}^{(b)}-\bar b_{km}|^2$. Its denominator is the number of retained source-off recordings, not the sample-variance denominator used for the main budget plot. Known template amplitudes are not estimated from the test recording. Under exact calibrated means, independent proper-complex Gaussian noise of these variances and equal candidate probabilities, this nearest-response rule is maximum likelihood and minimizes the modelled classification error. The binary error is $Q(d_{cc'}/2)$, with $Q$ the standard-normal upper tail. For each true candidate, a union bound over the $20$ alternatives gives $P(\mathrm{error})\le20Q(d_{\min}/2)$. Therefore
-\begin{equation}
- 105\times20Q(d_{\min}/2)\le1
- \quad\Longleftarrow\quad d_{\min}\ge6.60846.
-\end{equation}
-This is a sufficient condition for no more than one expected error over $105$ classifications within the assumed noise law; it is neither a necessary separation nor a guarantee on the observed error count. Cross-sample correlations and calibration mismatch are not included. In particular, the noise-sensitivity check of Supplementary Note 16 is not a validation of these Gaussian tail probabilities.
-
-For the learned comparison, the one-dimensional U-Net receives the real and imaginary microphone phasors as $12$ input channels over frequency, padded from $41$ to $48$ bins, and returns $16$ real numbers forming eight complex coefficients. Encoder widths are $(64,128,256,512,1024)$. Each arm uses $20000$ synthetic training and $2000$ independent synthetic validation examples: a uniformly sampled catalogue member is propagated through that arm's measured operator, then independent proper-complex Gaussian noise at its retained baseline scale is added. Inputs are standardized using the synthetic training set. The frozen recipe uses mean-square coefficient loss, batch size $512$, learning rate $1.5\times10^{-3}$, at most $200$ epochs and validation patience $12$. Seeds are $0,1,2$, with seed zero designated primary; the measured test recordings supply no training or validation labels. The network output is assigned by the largest absolute normalized complex overlap with the same $21$ drive vectors. Ties use fewer active sources and then lexicographic support order. Saved confusion matrices confirm $105/105$ for the primary seed and the matched filter in both arms (Supplementary Table~\ref{tab:catalogue_accuracy}); the two other network seeds also give $105/105$ in each arm.
-
-The calibrated minimum distances of the catalogue sessions are $63.8128$ without the lens and $172.2673$ with it (Supplementary Fig.~\ref{figS:catalogue_separation}). The closest pairs are neighbouring single-source candidates, speakers $4$--$5$ and $7$--$8$, respectively. A separate no-lens calibration from the profile sessions gives $40.5127$, with the retained within-session bootstrap interval $37.1159$--$66.1783$. It has no classifier count in this comparison. Thus $40.5$--$63.8$ is not a spread from the classification acquisition. The measured ceiling accuracy is the primary observation; the distances are conditional diagnostics computed from calibrated operators. These results are specific to this fixed catalogue. They do not establish that every classifier performs perfectly, that unrestricted source profiles are recovered, or that a learned decoder is unnecessary for other source classes or published datasets.
 
 \clearpage
 

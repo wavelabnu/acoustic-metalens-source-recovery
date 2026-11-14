@@ -1,4 +1,0 @@
-arm,session,source,codebook_d_min_sigma,ci_lo,ci_hi,ci_level_pct,needed_sigma,n_shots,n_competitors,matched_filter_correct,matched_filter_total
-no lens,EXP 04 A,unet_contrast.npz:A_codebook_d_min,63.8128,,,,6.60846,105,20,105,105
-no lens,EXP 06 A,exp06_validation.npz:v1_d_min,40.5127,37.1159,66.1783,95,6.60846,105,20,,
-with lens,EXP 04 B,unet_contrast.npz:B_codebook_d_min,172.267,,,,6.60846,105,20,105,105

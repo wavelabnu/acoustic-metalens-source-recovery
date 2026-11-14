@@ -23,11 +23,12 @@ def test_publication_inventory_has_only_retained_networks_and_figures():
     assert {Path(n).name for n in names if n.endswith('.jpg')} == {
         'photo_setup_withlens.jpg', 'char_tube.jpg'}
     figures = {n for n in names if n.startswith('paper/figures/') and n.endswith('.pdf')}
-    assert len(figures) == 14
+    assert len(figures) == 13
     assert 'paper/figures/main/current/Fig4.pdf' in figures
     assert 'paper/figures/supplement/figS6_exprecon.pdf' in figures
-    assert 'paper/figures/supplement/figS_catalogue_separation.pdf' in figures
-    assert 'supplementary/catalogue/recordings.npz' in names
+    assert not any(n.startswith(('supplementary/catalogue/','supplementary/original_analysis/'))
+                   for n in names)
+    assert not any((deposit.ROOT/name).exists() for name in deposit.RETIRED_PATHS)
     assert 'notebooks/models/nn_prior_current/geometry_reference.json' in names
     assert {n for n in names if n.startswith('notebooks/') and n.endswith('.py')} == {
         'notebooks/train_nn_prior_plane.py'}

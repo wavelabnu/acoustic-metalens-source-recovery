@@ -5947,19 +5947,7 @@ def _adopted_main_figure(number):
     getattr(figure_revision, f'fig{number}')()
 
 
-def fig_catalogue_separation():
-    """The ninth Supplementary figure added in the final submission."""
-    import subprocess
-    import sys
-    root=PAPER.parent
-    output=FIGS/'supplement'/'figS_catalogue_separation'
-    output.parent.mkdir(parents=True,exist_ok=True)
-    subprocess.run([sys.executable,str(root/'supplementary/make_figS_catalogue.py'),
-        str(root/'supplementary/source_data/figS_separability.csv'),str(output)],check=True)
-
-
 FIGURES = {
-    'figS_catalogue_separation': fig_catalogue_separation,
     **{f'Fig{number}': functools.partial(_adopted_main_figure, number)
        for number in range(1, 6)},
     'fig_amplitude_free_example': fig_amplitude_free_example,

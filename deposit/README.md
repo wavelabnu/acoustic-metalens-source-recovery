@@ -1,4 +1,4 @@
-# Data inventory — final 14 November 2026 manuscript
+# Data inventory — 14 November 2026 manuscript, edition 4
 
 **Resonant enhancement and source priors shape subwavelength acoustic
 reconstruction** — Nurtugan Rysmambetov, Zhanat Kappassov and Bakhtiyar Orazbayev.
@@ -19,7 +19,6 @@ contains commands and status. DOI 10.5281/zenodo.24221204 is reserved.
 | Supplementary Figure 8 / Notes 14–15 | Singular patterns and six `nn_prior_plane` checkpoints |
 | Supplementary Table 1 | `supplementary/source_data/rank_sensitivity_table.csv` and frozen complex TSVD returns |
 | Supplementary Note 16 | Complete portable C10 analysis under `supplementary/covariance/`; original input hashes retained |
-| Supplementary Figure 9 / Table 2 / Note 17 | `supplementary/catalogue/`, separation CSV, original code and portable retraining driver |
 
 Frozen figure inputs are under `paper/wavelab_figs_20260803/professor_v7/`;
 the EXP 06 arrays are under the adjacent `exp_recon_exp06/` directory.
@@ -31,17 +30,6 @@ EXP 06 `images_*.npz` files contain `Y` (99,41,6) complex output phasors,
 `D` (99,41,8) literal complex voltage-drive phasors, `freqs_hz`, kinds and
 block labels. Nine calibration repeats are averaged; five pattern repetitions
 and nine background recordings remain separate. See unchanged `EXPORT_NOTES.md`.
-
-`supplementary/catalogue/recordings.npz` contains `freqs_hz` (41,), `templates`
-(21,8), and for A/B: `H` (41,6,8), `sigma` (41,6), `Y` (21,5,41,6) and
-`baseline` (5,6,41). `Y` is background-subtracted; E|n|²=sigma². H maps the
-unit catalogue coefficients at the fixed acquisition drive level to output
-phasors. Reduction is 2*rfft(wave)/51200 at the selected integer-Hz bins,
-51200 samples at 51200 Hz. Operators/noise scales match the frozen analysis.
-
-The catalogue provenance gives hashes for all 198 no-lens and 263 with-lens
-raw acquisition files used in reduction, including ancillary blocks. Those
-raw files are absent; exactly 105 tests per arm form the comparison.
 
 C10 `inputs/cache/` holds individual calibration, baseline and ladder phasors;
 `inputs/releases/` holds transfer/calibration controls; `inputs/nc/` holds
@@ -55,9 +43,7 @@ Checkpoint audits use `weights_only=True`.
 
 ## Limits
 
-The eighteen prior checkpoints are original. The six catalogue U-Net weights
-were not saved; frozen predictions and the exact recipe are supplied with a
-driver for new runs. Profile-session catalogue bootstrap values and exact
-noisy Figure 2c realizations remain frozen inputs. Forty original ladder
+The eighteen prior checkpoints are original. Exact noisy Figure 2c
+realizations remain frozen inputs. Forty original ladder
 waveforms are included; other raw recordings, full tube acquisitions and
 verified installed CAD are not. No missing measurement is replaced by simulation.
