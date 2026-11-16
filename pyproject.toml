@@ -7,6 +7,8 @@ name = "acoustic-metalens-source-recovery"
 version = "1.0.0"
 description = "Code and data for resonant enhancement and source priors in subwavelength acoustic reconstruction"
 requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = ["numpy", "scipy", "matplotlib"]
 
 [project.optional-dependencies]

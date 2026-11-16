@@ -1,14 +1,28 @@
-# Reuse terms pending author approval
+# Licensing and third-party notices
 
-The supplied archives explicitly state that the authors have not provided
-reuse terms. This preparation does not grant new rights. Keep the GitHub
-repository and Zenodo draft unpublished until the authors approve publication
-and licences. Proposed terms, not yet applied:
+Public release authorized by the corresponding author on 16 November 2026.
+The proposed split licences are applied to this version:
 
-- MIT for author-owned software: <https://opensource.org/license/mit>
-- CC BY 4.0 for author-owned data, figures and documentation:
-  <https://creativecommons.org/licenses/by/4.0/>
+- Author-owned software, including Python source, tests and build scripts:
+  **MIT**, in `LICENSE` (<https://opensource.org/license/mit>).
+- Author-owned measurements, model exports, neural checkpoint weights,
+  Source Data, figures, photographs, manuscript text and documentation:
+  **Creative Commons Attribution 4.0 International (CC BY 4.0)**,
+  in `licenses/CC-BY-4.0.txt`
+  (<https://creativecommons.org/licenses/by/4.0/>).
 
-The publisher's `sn-jnl.cls` retains its embedded copyright/distribution terms.
-Manuscript snapshots are supplied for the numerical audit; their public
-release/reuse must also be included in the authors' decision.
+Copyright 2026 Nurtugan Rysmambetov, Zhanat Kappassov and Bakhtiyar Orazbayev.
+Please cite `CITATION.cff` and identify modifications when redistributing data.
+
+## Publisher template exception
+
+`paper/sn-jnl.cls` and the publisher template files inside
+`manuscript/overleaf_project_20261114.zip` are supplied unchanged and retain
+their embedded copyright and distribution notices, including the LaTeX
+Project Public License 1.3c or later where stated. They are excluded from
+the author-owned MIT/CC BY grants above. No publisher endorsement is implied.
+External Python/LaTeX dependencies are not vendored and retain their own terms.
+
+The provenance records describe the original input archives as received;
+historical `license_file_included: false` values refer to those inputs,
+not this licensed release.

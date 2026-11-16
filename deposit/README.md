@@ -4,7 +4,7 @@
 reconstruction** — Nurtugan Rysmambetov, Zhanat Kappassov and Bakhtiyar Orazbayev.
 
 Extract the paired code archive into the same directory. The root README
-contains commands and status. DOI 10.5281/zenodo.24221204 is reserved.
+contains commands and status. Version DOI: <https://doi.org/10.5281/zenodo.24221204>.
 
 | Item | Inputs and code |
 |---|---|
@@ -47,3 +47,10 @@ The eighteen prior checkpoints are original. Exact noisy Figure 2c
 realizations remain frozen inputs. Forty original ladder
 waveforms are included; other raw recordings, full tube acquisitions and
 verified installed CAD are not. No missing measurement is replaced by simulation.
+
+## Reuse
+
+Author-owned data, figures, manuscript text and documentation are CC BY 4.0;
+see `licenses/CC-BY-4.0.txt`. The paired software is MIT. Publisher template
+files retain their embedded third-party terms and are excluded from these
+author-owned grants; see `LICENSE_STATUS.md` in the paired code archive.

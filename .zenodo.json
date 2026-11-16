@@ -2,7 +2,7 @@
   "title": "Code and data for: Resonant enhancement and source priors shape subwavelength acoustic reconstruction",
   "upload_type": "dataset",
   "version": "1.0.0",
-  "publication_date": "2026-11-14",
+  "publication_date": "2026-11-16",
   "description": "Companion code, reduced measurements, frozen inputs, Source Data and validation for the 14 November 2026 manuscript, edition 4. Supports five main figures, eight supplementary figures, Supplementary Notes 1–16 and one supplementary table. Includes eighteen original prior-network checkpoints and complete covariance-analysis inputs. Forty selected raw waveforms are supplied; other raw time series are excluded. See README.md and REPRODUCTION_REPORT.json for scope and validation.",
   "creators": [
     {
@@ -26,8 +26,7 @@
     "inverse problems",
     "source priors"
   ],
-  "access_right": "restricted",
-  "access_conditions": "Prepared draft. Publication and reuse terms require author approval.",
+  "access_right": "open",
   "related_identifiers": [
     {
       "identifier": "https://github.com/wavelabnu/acoustic-metalens-source-recovery",
@@ -35,5 +34,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Prepared for manuscript edition 4 (decision 117). Manual combined code/data deposit. Reserved DOI: 10.5281/zenodo.24221204. Do not create a second automatic GitHub deposit for this version. No article DOI or final reuse licence has been supplied."
+  "notes": "Manuscript edition 4 (decision 117). Manual combined code/data deposit. Version DOI: 10.5281/zenodo.24221204. Author-owned code: MIT; author-owned data and documentation: CC BY 4.0. Publisher template files retain their embedded third-party terms. No article DOI supplied.",
+  "license": "cc-by-4.0"
 }

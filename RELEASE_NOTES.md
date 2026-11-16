@@ -1,7 +1,9 @@
-# Prepared version 1.0.0 — manuscript edition 4, 14 November 2026
+# Version 1.0.0 — released 16 November 2026
 
-Private GitHub preparation and unpublished Zenodo draft. Reserved DOI:
-10.5281/zenodo.24221204. Publication and reuse terms await author approval.
+Companion package for the author-selected manuscript edition 4 dated
+14 November 2026. DOI: <https://doi.org/10.5281/zenodo.24221204>.
+MIT for author-owned code; CC BY 4.0 for author-owned data/documentation.
+See `LICENSE_STATUS.md` for the publisher-template exception.
 
 This preparation follows manuscript decision 117. The previous prepared
 package is preserved outside this checkout in the local research archive;
@@ -32,3 +34,6 @@ its complete source remains in the initial Git commit.
 
 See README.md for acquisition limits and frozen-input caveats. This release
 preparation does not fill author-only journal submission declarations.
+
+The publication audit repeated all numerical checks and figure builders;
+licensing and release metadata were finalized without changing scientific inputs.

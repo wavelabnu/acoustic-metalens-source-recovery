@@ -152,7 +152,7 @@ def selected_files(root: pathlib.Path = ROOT) -> list[pathlib.Path]:
     relative.add(pathlib.Path("paper/figures/main/current/source_data/provenance.json"))
     # Curated additions for the final 14 November manuscript. Development
     # folders, caches and validation output are never part of this inventory.
-    for directory in ('supplementary','provenance','manuscript','docs'):
+    for directory in ('supplementary','provenance','manuscript','docs','licenses'):
         relative.update(p.relative_to(root) for p in (root/directory).rglob('*')
                         if p.is_file() and '__pycache__' not in p.parts
                         and p.name != 'desktop.ini' and p.suffix != '.pyc')
@@ -208,9 +208,11 @@ def release_metadata(root: pathlib.Path, files: list[pathlib.Path]) -> dict:
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "source_commit": revision, "source_tree_dirty": dirty,
         "python": sys.version, "platform": platform.platform(),
-        "dependencies": versions, "doi": None,
-        "reserved_doi": "10.5281/zenodo.24221204", "version": "1.0.0",
-        "publication_status": "draft", "license_status": "pending_author_approval",
+        "dependencies": versions, "doi": "10.5281/zenodo.24221204",
+        "version": "1.0.0", "publication_date": "2026-11-16",
+        "publication_status": "release",
+        "licences": {"author_owned_code": "MIT", "author_owned_data_and_documentation": "CC-BY-4.0",
+                     "third_party_exception": "See LICENSE_STATUS.md"},
         "manuscript_edition": MANUSCRIPT_EDITION,
         "license_file_included": (root / "LICENSE").is_file(),
         "checkpoint_count": sum(p.suffix == ".pt" for p in files),
@@ -225,7 +227,7 @@ def payload_role(path: pathlib.Path, root: pathlib.Path = ROOT) -> str:
                             "paper/figures/",
                             "supplementary/covariance/inputs/", "supplementary/covariance/reference/",
                             "supplementary/source_data/", "manuscript/")) or path.suffix == ".pdf"
-            or relative == "deposit/README.md"):
+            or relative in ("deposit/README.md", "licenses/CC-BY-4.0.txt")):
         return "data"
     return "code"
 

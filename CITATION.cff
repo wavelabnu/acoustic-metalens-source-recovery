@@ -1,8 +1,12 @@
 cff-version: 1.2.0
-message: "Prepared for manuscript edition 4. Cite the published Zenodo version after release; this DOI is currently reserved for a draft."
+message: "If you use this code or data, please cite this Zenodo release for manuscript edition 4."
 type: software
 title: "Code and data for: Resonant enhancement and source priors shape subwavelength acoustic reconstruction"
 version: 1.0.0
+date-released: 2026-11-16
+license:
+  - MIT
+  - CC-BY-4.0
 doi: 10.5281/zenodo.24221204
 url: https://github.com/wavelabnu/acoustic-metalens-source-recovery
 repository-code: https://github.com/wavelabnu/acoustic-metalens-source-recovery

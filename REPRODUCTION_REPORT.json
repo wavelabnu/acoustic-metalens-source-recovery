@@ -1,9 +1,7 @@
 {
   "prepared_date": "2026-11-14",
   "version": "1.0.0",
-  "status": "prepared_for_author_review",
-  "reserved_doi": "10.5281/zenodo.24221204",
-  "doi_registered": false,
+  "status": "validated_for_publication",
   "github": "https://github.com/wavelabnu/acoustic-metalens-source-recovery",
   "environment": {
     "python": "3.12.10",
@@ -41,6 +39,18 @@
     "pdf_pages": {
       "main": 27,
       "supplement": 25
+    },
+    "publication_recheck_date": "2026-11-16",
+    "publication_file_audit": {
+      "files": 205,
+      "python_sources_parsed": 34,
+      "csv_tables_checked": 30,
+      "numpy_archives_checked": 23,
+      "raw_numpy_waveforms_checked": 40,
+      "manuscript_and_figure_snapshots_match_selected_edition": true,
+      "all_cross_references_and_bibliographic_citations_resolved": true,
+      "all_18_original_checkpoint_bytes_unchanged": true,
+      "credential_scan": "passed"
     }
   },
   "final_manuscript_identities_sha256": {
@@ -106,17 +116,21 @@
       }
     }
   ],
-  "publication_decisions_pending": [
-    "Approve public release of the selected code, data and manuscript snapshots",
-    "Select author-owned code and data/documentation reuse licences"
-  ],
+  "publication_decisions_pending": [],
   "limits": [
     "Only forty raw waveforms are distributed; other raw recordings and complete tube acquisitions are not included",
     "Exact noisy Figure 2c realizations remain frozen inputs; their original matching producer was not located",
-    "No article DOI is asserted; publication and reuse terms await author approval"
+    "No article DOI is asserted; the deposit preserves the selected edition-4 manuscript snapshot"
   ],
   "source_commit": "Read CODE_RELEASE.json and DATA_RELEASE.json in the release archives for the exact prepared Git commit",
   "manuscript_edition": 4,
   "decision": 117,
-  "manuscript_source": "manuscript/_archive_20261114/editions/v4"
+  "manuscript_source": "manuscript/_archive_20261114/editions/v4",
+  "publication_date": "2026-11-16",
+  "doi": "10.5281/zenodo.24221204",
+  "licences": {
+    "author_owned_software": "MIT",
+    "author_owned_data_and_documentation": "CC-BY-4.0",
+    "third_party_exception": "Publisher template files retain embedded terms; see LICENSE_STATUS.md"
+  }
 }

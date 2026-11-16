@@ -7,9 +7,8 @@ Kappassov and Bakhtiyar Orazbayev**. Prepared version **1.0.0** follows the
 main figures, eight supplementary figures, Supplementary Notes 1–16 and one table.
 
 - GitHub: <https://github.com/wavelabnu/acoustic-metalens-source-recovery>
-- Reserved Zenodo DOI: **10.5281/zenodo.24221204**.
-- Status: private repository and unpublished Zenodo draft. Publication and
-  reuse terms await author approval. The DOI is registered on publication.
+- Zenodo: <https://doi.org/10.5281/zenodo.24221204> (version 1.0.0).
+- Release date: **16 November 2026**. Code: MIT; data and documentation: CC BY 4.0.
 
 ## Contents
 
@@ -130,8 +129,12 @@ the preparation changes are in `RELEASE_NOTES.md`.
 
 ## Citation and reuse
 
-`CITATION.cff` provides the three authors, version and reserved DOI. Cite the
-published version DOI after release. No article DOI has been supplied.
-Reuse terms await author approval; see `LICENSE_STATUS.md`. The proposed
-choice is MIT for code and CC BY 4.0 for data/documentation; it is not applied.
-The publisher's `sn-jnl.cls` retains its embedded third-party terms.
+`CITATION.cff` provides the three authors, version, release date and DOI.
+Cite <https://doi.org/10.5281/zenodo.24221204>. No article DOI has been supplied.
+Author-owned software is MIT; author-owned data, figures, manuscript text
+and documentation are CC BY 4.0. See `LICENSE_STATUS.md` for the exact scope
+and the publisher-template exception.
+
+The dated manuscript snapshots preserve edition 4 as selected by the authors.
+Their availability statements describe the preparation date; use the current
+DOI and availability wording in `docs/PUBLICATION.md` for journal submission.
