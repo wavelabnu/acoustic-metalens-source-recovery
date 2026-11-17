@@ -1,10 +1,10 @@
-# Data inventory — 14 November 2026 manuscript, edition 4
+# Data inventory — amended submitted manuscript, 17 November 2026
 
 **Resonant enhancement and source priors shape subwavelength acoustic
 reconstruction** — Nurtugan Rysmambetov, Zhanat Kappassov and Bakhtiyar Orazbayev.
 
 Extract the paired code archive into the same directory. The root README
-contains commands and status. Version DOI: <https://doi.org/10.5281/zenodo.24221204>.
+contains commands and status. Version DOI: <https://doi.org/10.5281/zenodo.24308307>.
 
 | Item | Inputs and code |
 |---|---|

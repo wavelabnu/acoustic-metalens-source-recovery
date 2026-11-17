@@ -28,97 +28,106 @@
     "path": "paper/figures/main/current/Fig1.pdf",
     "sha256": "334a40687313bf3322b969693698448049c8406451b6e84797e90851471853e6",
     "source_name": "Figure1.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/main/current/Fig2.pdf",
     "sha256": "6a1f5aaf2542fa794ec10ee5c7075eb6378fa0b8da3f93e24704aa41ee936fe1",
     "source_name": "Figure2.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/main/current/Fig3.pdf",
     "sha256": "6c9013d05c018f1a1479d67a050780e8acd3821ca1fad6e3ae76f3bce7053535",
     "source_name": "Figure3.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/main/current/Fig4.pdf",
     "sha256": "5378006033051661dca97007de731358ceb91afa25a65abc3d4d712925791e85",
     "source_name": "Figure4.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/main/current/Fig5.pdf",
     "sha256": "892e98d39d9c0d4e62924e52bd0716da2544fe6a5b8c7d1cd17caf048448af0d",
     "source_name": "Figure5.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/figS2_lensmodes.pdf",
     "sha256": "b814e10cb2a20356b82cf456631a2e16b078037f1fa797bc764158015d058e34",
     "source_name": "SupplementaryFigure1.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/figS3_freqsweep.pdf",
     "sha256": "e7b57f131b8e034c83b6c2b1072707628805810edcf51ba738a998f2140b24e9",
     "source_name": "SupplementaryFigure2.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/figS4_install.pdf",
     "sha256": "07101c3c1f89055fa997bc20b3f4afb75b7f817f5486c800c6196aca3f50a32e",
     "source_name": "SupplementaryFigure3.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/fig_q_sweep.pdf",
     "sha256": "ff3c7e3ba0558a866cd617f51318b4d047fc4251252974b0787ab5208d24e4dd",
     "source_name": "SupplementaryFigure4.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/figS5_qscatter.pdf",
     "sha256": "5afc015e479d8ac60c1f94c01b31c3a4214a25c6b9499a066477b66f8081f0d6",
     "source_name": "SupplementaryFigure5.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/fig_measured_budget_rewrite.pdf",
     "sha256": "af08811651e94917b0f3e438400c40a807a5eae985827562c34c8557e3bded4b",
     "source_name": "SupplementaryFigure6.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/figS6_exprecon.pdf",
     "sha256": "52c6e47478ed44c4db7d2fd18ea1b47efacccdb7942a5cbeaf99c7c0c6463585",
     "source_name": "SupplementaryFigure7.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/figures/supplement/fig_singular_patterns.pdf",
     "sha256": "1996c186e7aa34fa691616ed7544c44438fdf374b8c135ae1d262172ea6f056a",
     "source_name": "SupplementaryFigure8.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/main.pdf",
-    "sha256": "be753352b43ccffe2f980618f1e5521033e9f32aee02be5e5411ec535ef04446",
+    "sha256": "77524e0c372469935bca5d28d926b92bd45af0ec46e68813feb3f14f345206bd",
     "source_name": "Manuscript.pdf",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "paper/supplement.pdf",
-    "sha256": "e7388ee92b7aec6b363a23af231e404c8c2c0904809c081e83d770656787ff60",
+    "sha256": "51668744e4a51aa321b76ecd9c95b59b190c1af50e98ae7dba66c5d69da45531",
     "source_name": "Supplementary_Information.pdf",
-    "manuscript_edition": 4
-  },
-  {
-    "path": "manuscript/overleaf_project_20261114.zip",
-    "sha256": "bec3848bd6e681fa72c10fd5bbd3b95d4ffae95c2091d5cd1c639a84c4832881",
-    "source_name": "overleaf_project.zip",
-    "manuscript_edition": 4
+    "manuscript_edition": 4,
+    "change": "Amended submitted manuscript snapshot, 17 November 2026; figure bytes unchanged from v1.0.0"
   },
   {
     "path": "supplementary/source_data/rank_sensitivity_table.csv",
@@ -226,5 +235,11 @@
     "sha256": "57afe330544d5e4b2aa68ec5f0306b41542d1672dfa6bbb3ee188490752776d1",
     "change": "Five input-root declarations made relative to the deposit",
     "source_name": "c10_gap_verification.py"
+  },
+  {
+    "path": "manuscript/overleaf_project_submitted_20261117.zip",
+    "sha256": "ff96a63db7472578e6da9985f7833fc765ae87130fddfdfafd7a61ea35123aae",
+    "source_name": "Resonant_enhancement_and_source_priors_shape_subwavelength_acoustic_reconstruction.zip",
+    "change": "Unchanged author-supplied amended submission project"
   }
 ]

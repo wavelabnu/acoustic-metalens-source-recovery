@@ -42,8 +42,8 @@
 \author[2,3]{\fnm{Zhanat} \sur{Kappassov}}\nomail
 \author[1,3]{\fnm{Bakhtiyar} \sur{Orazbayev}}\nomail
 \affil[1]{\orgdiv{Department of Physics}, \orgname{Nazarbayev University}, \orgaddress{\city{Astana}, \country{Kazakhstan}}}
-\affil[2]{\orgdiv{Department of Robotics}, \orgname{Nazarbayev University}, \orgaddress{\city{Astana}, \country{Kazakhstan}}}
-\affil[3]{\orgdiv{Robotics Center}, \orgname{ISSAI}, \orgaddress{\city{Astana}, \country{Kazakhstan}}}
+\affil[2]{\orgdiv{School of Computing and Artificial Intelligence}, \orgname{Nazarbayev University}, \orgaddress{\city{Astana}, \country{Kazakhstan}}}
+\affil[3]{\orgdiv{Robotics Center}, \orgname{Institute of Smart Systems and Artificial Intelligence, Nazarbayev University}, \orgaddress{\city{Astana}, \country{Kazakhstan}}}
 
 \maketitle
 
@@ -89,8 +89,7 @@ Markers distinguish coincident curves.}
 \includegraphics[width=.65\textwidth]{figures/supplement/figS4_install.pdf}%
 \caption{\label{fig:install}%
 Model margin $\sigma_8/\sigma_n$, the weakest singular gain divided by the model noise standard deviation, at relative budget $B=64$~dB; the dashed horizontal level is $1$.
-(a)~Standoff; dotted baseline. (b)~Lens half-height: shading $2.5$--$4\,d$ (factor of about three);
-dotted array half-height $3.5\,d$. Independent sources with the lens,
+(a)~Source--lens standoff; the dotted line marks the baseline value. (b)~Lens half-height at fixed element count; shading marks $2.5$--$4\,d$, and the dotted line marks the source-array half-height $3.5\,d$. Independent sources with the lens,
 except the coupled-source comparison in (a). Here $d$ is source pitch.}
 
 \end{figure}
@@ -100,8 +99,8 @@ except the coupled-source comparison in (a). Here $d$ is source pitch.}
 \centering
 \includegraphics[width=0.62\textwidth]{figures/supplement/fig_q_sweep.pdf}%
 \caption{\label{figS:qsweep}%
-Sensitivity to the resonant self-term coefficient $Q$ on fixed tone grids (independent sources); its relation to loaded quality factor is given in Note~1.
-Here $F$ is the number of drive tones. For $F=20$: range over ten frequency shifts; the median falls and crosses one near $Q\approx53$.
+Weakest-channel margin $\sigma_8/\sigma_n$ versus the resonant self-term coefficient $Q$ on fixed tone grids (independent sources); the relation between $Q$ and loaded quality factor is given in Note~1.
+Here $F$ is the number of drive tones. For $F=20$, shading spans ten frequency shifts and the median margin crosses one near $Q\approx53$.
 The $F=20$ curves use a $64$ dB relative budget; the $F=80$ curve uses $58$ dB. At the same strongest-gain normalization, the latter increases the assumed per-sample noise-to-gain ratio by a factor of $2$. The comparison changes both the tone grid and relative noise level.}
 
 \end{figure}
@@ -123,8 +122,7 @@ ASTM E2611): microphone/resonator region above and driver below, from one photog
 Measured singular spectra of the unweighted per-volt operator $H_V$. (a)~Normalized by each operator's strongest singular gain $\sigma_1$;
 empirical spectral cutoff $0.03\,\sigma_1$ (dotted) sets the counts.
 Dashed: lens-session median recording prediction error.
-(b)~Unnormalized, at identical drives. Shading spans the three sessions'
-median-derived absolute error levels; its upper edge sets the common cutoff for counts.
+(b)~Unnormalized spectra at identical drives. Shading spans reference levels obtained by multiplying each operator's strongest singular gain by its session's median relative prediction error (Note~10); the largest level sets the common cutoff for the reported counts.
 Arrows compare singular gains at the same ordered index; the corresponding source patterns can differ between operators.}
 
 \end{figure}
@@ -133,12 +131,11 @@ Arrows compare singular gains at the same ordered index; the corresponding sourc
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{figures/supplement/figS6_exprecon.pdf}%
 \caption{\label{figS:exprecon}%
-Driven profiles and model/measured reconstructions, without/with the lens.
-Displayed profiles are phase-aligned real parts, normalized independently;
-Reconstruction similarity $\rho$ is the absolute normalized complex inner product of recovered and true profiles. Model: the coupled-source model in both, at the $64$~dB reference budget with model noise standard deviation $\sigma_n=10^{-3}$, using peak-one drives and the noise-level cutoff of Note~11: five/eight model channels without/with the lens, compared with floor ranks three/eight without/with the lens in main-text Fig.~2c. Distance and wavenumber labels refer to the bench; the model applies the same eight-component patterns on its coarser grid, not those physical distances.
-Measurements: $8$ loudspeakers, $6$ microphones, $41$ tones over
-$350$--$450$~Hz; four/five retained channels without/with the lens.
-Printed measured similarities are means over five individual acquisitions, computed before display averaging. Model profiles use one noise realization and align their common phase to the true drive; measured profiles follow the separate repeat-alignment convention in Note~11. In contrast, main-text Fig.~4 uses a common true-peak display scale and scores the unrefitted full complex vectors.}
+Driven profiles and reconstructed profiles without/with the lens. Displayed curves are real parts after the phase and peak normalizations specified in Note~11. Similarity is
+$\rho=|\hat{\bm a}^{\dagger}\bm a|/(\|\hat{\bm a}\|\|\bm a\|)$, evaluated on the full complex profiles before display normalization.
+Model columns use the coupled-source model, peak-one drives, one noise realization and the $64$~dB reference budget with $\sigma_n=10^{-3}$. The supplementary noise-level cutoff retains five/eight channels without/with the lens; main-text Fig.~2c instead uses floor ranks three/eight and unit-norm drives. Distance and wavenumber labels describe the bench; the model applies the same eight-component patterns on its coarser grid.
+Measured columns use eight loudspeakers, six microphones and $41$ tones over $350$--$450$~Hz, retaining four/five channels without/with the lens. Printed similarities average five individual acquisitions; displayed profiles follow the separate repeat-alignment procedure in Note~11.
+Main-text Fig.~4 uses a common true-peak display scale and scores unrefitted full complex profiles.}
 
 \end{figure}
 \clearpage
@@ -198,10 +195,11 @@ $\lambda/26$ cosine & With lens & 6 & $0.55$ & $[0.49, 0.56]$ & $9/9$ \\
 \section*{Supplementary Information}
 \label{sec:supp}
 
-These Notes provide the model details and experimental controls supporting the main comparisons. Some controls use type-II discrete cosine transform (DCT-II) probes and an empirical relative spectral cut, whereas main-text Fig.~3 uses the acquired Fourier ladder and applies a baseline-normalized floor rule in its reconstruction calculation. Main-text Figs.~2--4 share one reconstruction score, RMS relative profile error $E_{\rm prof}$, and one tolerance, $E_{\rm prof}\le1/\sqrt2$. We state the source, averaging and error convention where each control is introduced.
+We provide the model details and experimental controls supporting the comparison of resonant enhancement and source priors. Notes~1--7 define the model, channel budgets and task criteria; Notes~8--12 describe the apparatus, calibration and repeatability; Notes~13--15 explain Gaussian and learned source priors; and Note~16 examines sensitivity to background covariance with a separate estimator.
 
-Main-text Fig.~2b plots root-mean-square (RMS) amplitude errors at a fixed budget. Main-text Fig.~3c plots the budget required to meet a chosen RMS tolerance, rather than amplitude-error values. Both use their stated white-noise models. Main-text Fig.~4b separates observed scalar errors from a bound under an assumed complete recording-error norm. The prior and network examples in Notes 14--15 are
-separate controls. Note 16 reports a noise-covariance sensitivity check with a separate estimator.
+Main-text Figs.~2--4 share one reconstruction score, root-mean-square (RMS) relative profile error $E_{\rm prof}$, and one tolerance, $E_{\rm prof}\le1/\sqrt2$. Model and budget calculations average squared errors over their stated noise laws; recorded-profile scores average over five acquisitions. The shape similarity $\rho$ and captured fraction $C_m$ used in supplementary controls are separate diagnostics, defined in Note~7. Some controls use type-II discrete cosine transform (DCT-II) probes and an empirical relative spectral cut, whereas main-text Fig.~3 uses the acquired Fourier ladder and a baseline-normalized floor rule. We state the source, normalization and cutoff for each comparison.
+
+Main-text Fig.~2b plots scalar RMS amplitude errors at a fixed budget, and Fig.~3c plots the budget required to meet the chosen scalar RMS tolerance. Both are calculations under their stated white-noise models. Main-text Fig.~4b reports five observed scalar errors and their medians, alongside a conditional bound based on an assumed complete recording-error norm. The prior and network examples in Notes~14--15 and the covariance analysis in Note~16 retain their separately stated source classes and estimators.
 
 \subsection*{Supplementary Note 1. The coupled-dipole model}
 
@@ -262,8 +260,7 @@ unchanged spatial drive, with $\|\bm a\|=1$ and independent zero-mean proper
 complex Gaussian noise, $\mathbb E|n_j|^2=\sigma_n^2$, $\sigma_n=10^{-3}$.
 Here $\|\cdot\|$ is the Euclidean norm, $\mathbb E$ averages over noise,
 and proper complex noise has independent real and imaginary parts of
-variance $\sigma_n^2/2$. Scale each stack to strongest singular gain
-$\sigma_1=1.585$: the common relative budget is $64$~dB.
+variance $\sigma_n^2/2$. We normalize each operator independently to strongest singular gain $\sigma_1=1.585$, giving a common relative budget $B=20\log_{10}(\sigma_1/\sigma_n)=64$~dB. Unless otherwise specified, the supplementary model controls retain channels with $\sigma_i\ge\sigma_n$, as defined in Note~2; the main-text reconstruction calculations use their stated floor rule. Equal relative budgets compare the singular spectra after this normalization and do not impose equal absolute noise on the unnormalized operators.
 The counts of eight sources, ten lens elements and six microphones match the bench. The model pitch makes the finest Fourier half-period $\lambda_0/20$; the $0.4d$ gap is comparable to the finest DCT probe's evanescent decay length in Note~6. The microphone line has an angular half-aperture of approximately $31.0^\circ$, giving a total aperture comparable to the measured angular span while retaining a simpler geometry. Twenty tones give a tone spacing of $2.1\%$ of $f_0$ across a band containing the collective resonances in Note~3; the spacing is finer than the isolated-element linewidth, but need not resolve every collective linewidth. Notes~3--6 vary the tone placement, number and lens geometry rather than treating these settings as an optimum.
 
 \subsection*{Supplementary Note 2. Measurement budget needed for each channel}
@@ -324,9 +321,7 @@ rises from $32$ to $123$~dB for independent sources and from $30$ to
 $81$~dB for coupled sources. At $64$~dB, counts fall from $8$ to $5$ and
 from $8$ to $7$, respectively.
 
-The ten selected resonators have measured frequencies $398.5$--$404.5$~Hz.
-The batch's $\pm1.25\%$ variation is smaller than the assumed lens fractional
-linewidth, approximately $(1+\gamma)/Q\simeq6\%$.
+The ten selected resonators have measured frequencies $398.5$--$404.5$~Hz. The full characterized batch spans $394.5$--$404.5$~Hz (Note~9), a fractional spread of approximately $2.5\%$ of the reference frequency. Even this full spread is smaller than the assumed isolated-element fractional linewidth, approximately $(1+\gamma)/Q\simeq6.4\%$.
 Assigning the ten measured resonance frequencies to the model lens elements retains eight channels, with margin $48\times$ versus
 $41\times$ for identical elements. With direct coupling removed, these
 frequencies retain five channels. Thus the tested frequency differences do not reproduce the directly coupled lens's channel count under this normalization.
@@ -356,9 +351,9 @@ grid. Retuning the tones to the resonance band avoids this sampling loss
 (Note~3). Installation sweeps use independent sources unless labelled otherwise.
 
 
-\subsection*{Supplementary Note 7. Captured fraction, similarity and the three criteria}
+\subsection*{Supplementary Note 7. Task criteria, profile error and shape diagnostics}
 
-This Note distinguishes known-pattern detection, scalar amplitude estimation and preservation of shape under truncation. Here $\epsilon$ is the model noise standard deviation or, for measured operators, the selected empirical spectral cutoff. The empirical cut alone supplies neither a Gaussian noise model nor a bound on every recording. With that convention, the scalar ratio below is an operational sensitivity test. It describes RMS error when a white-noise law is assumed, and a deterministic error bound when the complete recording-error norm is bounded.
+This Note distinguishes known-pattern detection, scalar amplitude estimation and full-profile reconstruction, and relates the latter to shape capture under truncation. In the supplementary model controls, $\epsilon=\sigma_n$ is the per-sample complex-noise standard deviation and the channel-retention cutoff. In the unweighted measured-operator controls, $\epsilon$ denotes the selected empirical spectral cutoff. Using that empirical cutoff in the scalar ratio $\epsilon/g_m$ below defines an operational sensitivity test; it does not by itself specify a Gaussian noise law or bound every recording. The same ratio gives RMS scalar error when $\epsilon=\sigma_n$ under white noise, or a deterministic scalar-error bound when the separate assumption $\|\bm e\|\le\epsilon$ bounds the complete recording error $\bm e$.
 
 Using the SVD of Note 2, let $\mathcal S$ be the retained source subspace. Its orthogonal projector is
 $P_{\mathcal S}=\sum_{\sigma_i\ge\epsilon}\bm v_i\bm v_i^\dagger$, with
@@ -390,10 +385,7 @@ $E_{\rm prof}=[\mathbb E\|\hat{\bm a}-\bm a\|^2/\|\bm a\|^2]^{1/2}$
 and use $E_{\rm prof}\le1/\sqrt2$. Model and budget scores average over
 the stated noise law; the measured score replaces the expectation by the
 mean over five acquired records, without phase or amplitude refitting.
-The half-relative-mean-square-error tolerance is an operational convention,
-not an empirically calibrated confidence threshold. In the noise-free
-projection limit it gives the same $C_m\ge0.5$ capture test; noise adds
-inverse variance and can change the verdict.
+The reference reconstruction $\hat{\bm a}=0$ has normalized mean-square error one for every nonzero prescribed profile. We require at least a factor-of-two reduction relative to this reference: $E_{\rm prof}^2\le1/2$. This gives the RMS tolerance $1/\sqrt2$. The factor of two is an explicit performance benchmark; the zero reconstruction is a reference, not an asserted optimal estimator without data. In the noise-free orthogonal-projection limit, the benchmark gives the same $C_m\ge0.5$ capture test. With noise, amplification in the retained inverse directions adds a variance term and can change the verdict. The tolerance is not an empirically calibrated confidence threshold or a guarantee of application-specific fidelity.
 The detection test here compares $g_m$ with $\epsilon$; main-text Figs.~2--3
 instead compare received power with total recording noise power (main-text Methods).
 Neither convention specifies a false-alarm probability or discrimination between patterns.
@@ -401,9 +393,12 @@ Neither convention specifies a false-alarm probability or discrimination between
 With independent complex white noise~\cite{schreier2010}, a known pattern's RMS amplitude
 error is $\sigma_n/g_m$, where
 $g_m^2=\sum_i\sigma_i^2|\alpha_i|^2$ and $\alpha_i=\bm v_i^\dagger\phi_m$.
-For a free-source reconstruction, the full-rank least-squares projection
-onto $\phi_m$ instead has RMS error
-$\sigma_n[\sum_i|\alpha_i|^2/\sigma_i^2]^{1/2}$.
+For observations $\bm b=T\phi_m+\bm n$ and full-column-rank $T$, first reconstructing all source coefficients by least squares and then projecting onto $\phi_m$ gives the scalar estimate $\hat A_{\rm free}=\phi_m^\dagger T^+\bm b$, where $T^+$ is the Moore--Penrose pseudoinverse. Its RMS error is
+\[
+ [\mathbb E|\hat A_{\rm free}-1|^2]^{1/2}
+ =\sigma_n\left[\sum_i\frac{|\alpha_i|^2}{\sigma_i^2}\right]^{1/2}.
+\]
+This scalar projection error is distinct from the error of the complete reconstructed profile.
 For a unit true pattern, TSVD has exact squared-error expectation
 \begin{equation}
  \mathbb E\|\hat{\bm a}-\phi_m\|^2
@@ -435,15 +430,16 @@ same full-profile RMS quantity, separately from scalar amplitude precision.
 
 The floor multiplier controls which weak directions are inverted. Changing it from three to two or four moves the channel-entry budgets by $-3.52$ or $2.50$~dB. Recomputing the full-profile RMS test for all eight acquired patterns in both arms changes every lens--no-lens saving by at most $0.1$~dB on the plotted grid. The relative savings in this control are therefore stable to the tested multiplier changes, whereas the absolute requirements retain that convention.
 
+For the model comparison in main-text Fig.~2, we fix the profile-error benchmark, the $64$~dB model reference, the per-arm normalization and the floor rule across patterns and arms. These choices are specified retrospectively; they were not selected on an independent validation set. The $64$~dB value is retained from earlier model calculations and corresponds to $\sigma_n/\sigma_1=10^{-64/20}$. It is an illustrative simulation setting, not an apparatus noise measurement or a threshold inferred from successful reconstructions. On the tested $0.1$~dB grid, all three displayed model patterns are detected, scalar RMS errors are at most $2\%$ in both arms, and the no-lens retained rank is three throughout $55.9$--$75.4$~dB. This interval verifies those properties rather than defining the reference budget. Evaluating the full-profile error on every grid point gives the narrower interval $62.0$--$75.4$~dB for unchanged Figure~2c pass/fail outcomes: the $\lambda/5$ cosine alone passes without the lens, while all three profiles pass with it. Across these $135$ budgets the retained ranks are three and eight, respectively. Below $62.0$~dB within the broader interval, the finest with-lens profile fails the full-profile criterion despite passing the scalar-amplitude test. We report continuous profile errors and the tolerance sweeps above so that the conclusions can be assessed beyond the chosen pass/fail benchmark.
+
+
 At four retained channels, model and measured passing shape sets are
 $\{0,1,2,3\}$ without the lens and $\{0,1,2,4\}$ with it.
 At $64$~dB, the finest passing half-periods without/with the lens are
 $2.67d$/$1.14d$ for independent sources and $2.00d$/$1.14d$ for coupled sources.
 At the common measured cut, requiring captured fractions $0.3$, $0.5$
 and $0.7$ gives finest passing indices $7$, $4$ and $2$ with the lens;
-both no-lens sessions give $3$ throughout. Because we test a discrete set of patterns, these passing indices do not define a continuous cutoff. The measured lens $m=4$ pattern has
-noise-free relative profile error $0.597$; passing scalar amplitude
-estimation therefore does not establish $50\%$ profile accuracy.
+both no-lens sessions give $3$ throughout. Because we test a discrete set of patterns, these passing indices do not define a continuous cutoff. The measured lens $m=4$ pattern has noise-free projection error $0.597$. This measures discarded source content; the full-profile RMS test additionally includes noise amplification as in equation~\eqref{eq:tsvd_error}. Passing the scalar amplitude test therefore does not determine the profile-error verdict.
 
 \subsection*{Supplementary Note 8. Apparatus and reproducibility}
 
@@ -556,10 +552,17 @@ Its shift from the first session exceeds within-session spread, so the
 five-repeat intervals underestimate between-session variation.
 Independent lens installations were not repeated.
 
-For the three profiles in main-text Fig.~4, the printed score is $E_{\rm prof}=[\frac15\sum_j\|\hat{\bm a}_j-\bm a_0\|^2/\|\bm a_0\|^2]^{1/2}$, without phase or amplitude refitting, using hard rank five and the first individual-baseline weights. This is the measured estimate of the same RMS score and uses the same $1/\sqrt2$ tolerance as main-text Figs.~2--3; the curve retains the first record for display. We additionally recompute complex TSVD at hard ranks four, five and six with each of the nine individual-baseline weight arrays. For the $\lambda/6.5$ sine, the lens lowers this five-repeat RMS profile error for $1$, $8$ and $9$ of the nine weight choices at ranks four, five and six, respectively. For the $\lambda/13$ sine and $\lambda/26$ cosine, it lowers the score for all nine weights at each tested rank. Rank five therefore supplies a matched-dimension comparison, not an optimized decoder; the coarsest profile's improvement depends on the analysis setting. The weight choices reuse the same recordings and are not independent experimental repeats.
+For the three profiles in main-text Fig.~4, we use the mean calibration operator and hard rank five in both arms. Individual-baseline weight array $\ell$ has diagonal entries $W^{(\ell)}_{(km),(km)}=1/|b^{(\ell)}_{km}|$, where $b^{(\ell)}_{km}$ is source-off recording $\ell$ at tone $k$ and microphone $m$, before subtraction of the baseline mean. These magnitudes define reconstruction weights, rather than estimates of noise standard deviation. The printed score uses the first array:
+\[
+ E_{\rm prof}=\left[\frac15\sum_{j=1}^{5}
+ \frac{\|\hat{\bm a}_j-\bm a_0\|^2}{\|\bm a_0\|^2}\right]^{1/2},
+\]
+with no phase or amplitude refitting. It estimates the same RMS score and uses the same $1/\sqrt2$ tolerance as main-text Figs.~2--3; the displayed curve is the first recording.
+
+We additionally recompute complex TSVD at hard ranks four, five and six with each of the nine individual-baseline weight arrays. For the $\lambda/6.5$ sine, the lens lowers this five-repeat RMS profile error for $1$, $8$ and $9$ of the nine weight choices at ranks four, five and six, respectively. For the $\lambda/13$ sine and $\lambda/26$ cosine, it lowers the score for all nine weights at each tested rank. Rank five therefore supplies a matched-dimension comparison, not an optimized decoder; the coarsest profile's improvement depends on the analysis setting. The weight choices reuse the same recordings and are not independent experimental repeats.
 
 
-Supplementary Table~\ref{tab:rank_sensitivity} lists the same five-record score at hard ranks four to six for every baseline weighting. The pass counts quoted for main-text Fig.~4 are specific to rank five and the first weighting. For the finest $\lambda/26$ cosine with the lens, the score is $0.84$ at rank four, where it fails the $1/\sqrt2$ tolerance for all nine weightings, and $0.63$ and $0.55$ at ranks five and six, where it passes for all nine. Without the lens, the coarsest $\lambda/6.5$ sine passes for all nine weightings at rank four, for six of nine at rank five, where the first weighting gives $0.73$, and for none at rank six. The fixed-rank comparison therefore establishes an improvement at a matched retained dimension, not a rank-independent pass or fail for any pattern.
+Supplementary Table~\ref{tab:rank_sensitivity} summarizes the five-record scores at ranks four to six, giving the first-weighting score, the range across all nine weightings and the number that pass. Main-text Fig.~4 uses rank five and the first weighting. For the finest $\lambda/26$ cosine with the lens, the first-weighting scores are $0.84$, $0.63$ and $0.55$ at ranks four, five and six, respectively: all nine weightings fail at rank four and pass at ranks five and six. Without the lens, the coarsest $\lambda/6.5$ sine passes for all nine weightings at rank four, six at rank five and none at rank six; its first-weighting score at rank five is $0.73$. These results establish the comparison at matched retained dimensions, while showing that some pass/fail outcomes change with rank and weighting.
 
 
 \subsection*{Supplementary Note 12. Background noise and averaging}
@@ -569,10 +572,14 @@ the no-lens repeat reuses the lens background. Averaging nine recordings
 reduces the background to $0.25$--$0.38$ of a single recording, close to
 the $1/3$ expected for independent repeats. Thus averaging helps within a session, but this test does not establish independence across drive frequencies or bound persistent background over longer times.
 
-\subsection*{Supplementary Note 13. Data weights}
+\subsection*{Supplementary Note 13. Gaussian data weights and effective channel count}
 
-To describe how a Gaussian estimate balances data and source knowledge, consider independent, zero-mean proper complex Gaussian channel coefficients of unit variance. The data weight is $d_i=\sigma_i^2/(\sigma_i^2+\sigma_n^2)$.
-When the gain is large relative to noise, the weight approaches one; when the gain is small, it approaches zero. Summing the weights gives the Gaussian effective channel count $\sum_i d_i$, which varies smoothly across the hard spectral cut~\cite{rodgers2000,antoni2012,stuart2010}.
+Consider independent, zero-mean proper-complex Gaussian source-channel coefficients $c_i$ with unit variance and observations $b_{U,i}=\sigma_i c_i+n_i$. The noise is independent of the source and proper-complex Gaussian, with zero mean and $\mathbb E|n_i|^2=\sigma_n^2$. The posterior means are
+\[
+ \hat c_i=\frac{\sigma_i b_{U,i}}{\sigma_i^2+\sigma_n^2},
+ \qquad d_i=\frac{\sigma_i^2}{\sigma_i^2+\sigma_n^2}.
+\]
+For $\sigma_i>0$, this is $\hat c_i=d_i b_{U,i}/\sigma_i$: $d_i$ weights the unregularized channel estimate. It approaches one for a gain large relative to noise and zero for a weak gain. The sum $\sum_i d_i$ defines a Gaussian effective channel count with a smooth transition between these limits~\cite{rodgers2000,antoni2012,stuart2010}. These posterior weights differ from the recording-row weights used in Notes~10--11.
 
 \subsection*{Supplementary Note 14. Source priors in channel coordinates}
 
@@ -594,9 +601,7 @@ is its projection onto recording singular vectors. The proper-complex Gaussian p
  (\bm b_U-\Sigma\bm\mu_c).
  \label{eq:prior_mean}
 \end{equation}
-For real pattern coefficients, use the real stack of $T\Phi$ with noise
-variance $\sigma_n^2/2$;
-non-Gaussian priors require transforming the full distribution or samples.
+For real pattern coefficients, use $[\operatorname{Re}(T\Phi);\operatorname{Im}(T\Phi)]$ and variance $\sigma_n^2/2$ per real observation. Non-Gaussian priors require transforming the full distribution or samples. In main-text Fig.~5c,d, all eight real source coefficients remain free: the update uses a bias-corrected least-squares statistic and its full empirical error covariance, fitted on the other seventeen source-class means. Directions $v_5,v_7$ of the fixed no-lens basis select only the displayed coordinates; they do not restrict that reconstruction to two coefficients. The separate model control below does impose a two-coefficient source class.
 
 We also test a separate model coefficient example at $64$~dB with shifted prior means. Main-text Fig.~5a,b instead uses the with-lens reference patterns $v_3,v_5$, $24$~dB and zero-mean correlated priors. This control uses fixed lens-free real-stack patterns $v_5,v_7$
 (Supplementary Fig.~\ref{figS:singularpatterns}), with other coefficients zero.
@@ -629,7 +634,7 @@ Seed 101 is retained in the reproduction outputs for this separate control.
 
 
 \begin{samepage}
-\subsection*{Supplementary Note 15. What trained networks learn}
+\subsection*{Supplementary Note 15. Gaussian training priors and the conditional-mean estimator}
 
 For real Gaussian sources $\bm a\sim\mathcal N(0,C_a)$, with zero mean
 and source covariance $C_a$, the exact
@@ -640,14 +645,23 @@ posterior mean uses $M=[\operatorname{Re}T;\operatorname{Im}T]$:
  [\operatorname{Re}\bm b;\operatorname{Im}\bm b].
  \label{eq:mmse}
 \end{equation}
-For training samples drawn from this same distribution, mean-square-error training targets the conditional mean~\cite{bishop2006}. The network can approach the minimum mean-square error (MMSE) estimator, but cannot improve its expected squared error under the stated joint source/noise distribution.
+For independent training samples drawn from this same joint source/noise distribution, mean-square-error training targets the conditional mean~\cite{bishop2006}. The neural control therefore tests whether training reproduces the analytic estimator selected by the assumed prior. This conditional mean is the minimum mean-square-error (MMSE) estimator under that distribution; its optimality does not prescribe which estimate has the smallest error for an individual fixed source.
 \end{samepage}
 
 
 \clearpage
 \subsection*{Supplementary Note 16. Sensitivity of a conditional error forecast to background covariance}
 
-This is an exploratory sensitivity analysis on previously examined recordings of the profile sessions: $16$ real single-source and two-source profiles, five recordings per profile and one lens installation. It introduces a real-ridge control, not a recalculation of the main-text floor-rank budget thresholds. Let $\mathbf y_w=\sqrt2[\operatorname{Re}(\mathbf y/\sigma);\operatorname{Im}(\mathbf y/\sigma)]$ be the $492$-coordinate real recording after division by the per-tone, per-microphone sample standard deviation. Let $F$ be the same real stack of the fixed mean calibration, with eight source columns. The unit-precision ridge inverse is $L=(F^{\mathsf T}F+I)^{-1}F^{\mathsf T}$. For a prescribed real drive $\mathbf a_0$, the conditional relative mean-square-error forecast is
+This is an exploratory sensitivity analysis on previously examined recordings of the profile sessions: $16$ real single-source and two-source profiles, five recordings per profile and one lens installation. It introduces a real-ridge control, not a recalculation of the main-text floor-rank budget thresholds. Let $D=\operatorname{diag}(\sigma_{km})$, where $\sigma_{km}^2$ is the sample complex variance of the nine source-off recordings at tone $k$ and microphone $m$, calculated about their mean with denominator eight. For the baseline-subtracted recording $\mathbf y$ and fixed mean calibration $H$, define
+\[
+ \begin{aligned}
+ \mathbf y_w&=\sqrt2[\operatorname{Re}(D^{-1}\mathbf y);
+                         \operatorname{Im}(D^{-1}\mathbf y)],\\
+ F&=\sqrt2[\operatorname{Re}(D^{-1}H);
+               \operatorname{Im}(D^{-1}H)].
+ \end{aligned}
+\]
+The recording has $492$ real coordinates and $F$ has eight source columns. The factor $\sqrt2$ gives unit variance per real coordinate under the proper-complex diagonal-noise assumption. The unit-precision ridge inverse is $L=(F^{\mathsf T}F+I)^{-1}F^{\mathsf T}$. For a prescribed real drive $\mathbf a_0$, the conditional relative mean-square-error forecast is
 \begin{equation}
  E_{\rm forecast}^2=\frac{\|(LF-I)\mathbf a_0\|^2+\operatorname{tr}(L\Sigma_wL^{\mathsf T})}{\|\mathbf a_0\|^2}.
  \label{eq:supp_forecast}
@@ -658,7 +672,7 @@ With circular-diagonal noise, the factors are $4.00$, $6.09$ and $2.45$ for the 
 
 These covariance estimates have rank at most eight and use only background recorded before calibration. They do not validate the noise law during the driven recordings. One estimator direction carries $87$--$98\%$ of the empirical propagated noise trace. Omitting the three background recordings with the largest contributions changes the factors to $2.40$, $2.91$ and $2.09$; this selection is based on the observed contributions and measures concentration rather than supplying an independent validation. The covariance predicts the recording-to-recording spread to within about a factor $1.5$, while the error persisting in the five-recording mean is consistent with omitted background-mean and calibration terms. The calibration term is only an upper bound because the calibration scatter also contains drive variation. This is not a causal decomposition of reconstruction error.
 
-For the separate per-recording baseline weighting used by the recorded-profile reconstructions, the corresponding real-ridge factors are smaller: $1.29$, $2.32$ and $1.45$ under the circular-diagonal law, and $0.83$, $1.57$ and $1.35$ with empirical correlations, in the same session order. Each factor averages squared errors over nine weightings of five recordings before forming the profile-wise RMS ratio. The weighting and covariance reuse the same background recordings. Neither set of factors is a correction factor for the complex TSVD thresholds or the available-budget lines in main-text Fig.~3. Those lines retain their stated diagonal-noise normalization.
+For the separate individual-baseline weighting used by the recorded-profile reconstructions, the corresponding real-ridge factors are smaller: $1.29$, $2.32$ and $1.45$ under the circular-diagonal law, and $0.83$, $1.57$ and $1.35$ with empirical correlations, in the same session order. Each factor averages squared errors over nine weightings of five recordings before forming the profile-wise RMS ratio. The weighting and covariance reuse the same background recordings. Neither set of factors is a correction factor for the complex TSVD thresholds or the available-budget lines in main-text Fig.~3. Those lines retain their stated diagonal-noise normalization.
 
 \clearpage
 

@@ -1,0 +1,135 @@
+{
+  "manuscript_snapshot": "submitted_20261117",
+  "source_project_sha256": "ff96a63db7472578e6da9985f7833fc765ae87130fddfdfafd7a61ea35123aae",
+  "source_project_members": [
+    {
+      "name": "sn-jnl.cls",
+      "bytes": 55857,
+      "sha256": "afdd709e43a76c1452c8696429d428b1c35a9339de050c7ca8a9b6f32c180556"
+    },
+    {
+      "name": "main.tex",
+      "bytes": 95965,
+      "sha256": "dcb5844f958c9bbfd75c747c8bf1d3c5d05bd59ba161abe679959f3bf31c81f3"
+    },
+    {
+      "name": "supplementary/supplement.tex",
+      "bytes": 64517,
+      "sha256": "2a4b19885df6fd1152a9bffe39bec120cdc44b2393ff8e41338dac84f45b095c"
+    },
+    {
+      "name": "figures/SupplementaryFigure8.pdf",
+      "bytes": 41321,
+      "sha256": "1996c186e7aa34fa691616ed7544c44438fdf374b8c135ae1d262172ea6f056a"
+    },
+    {
+      "name": "figures/SupplementaryFigure7.pdf",
+      "bytes": 30479,
+      "sha256": "52c6e47478ed44c4db7d2fd18ea1b47efacccdb7942a5cbeaf99c7c0c6463585"
+    },
+    {
+      "name": "figures/SupplementaryFigure6.pdf",
+      "bytes": 26295,
+      "sha256": "af08811651e94917b0f3e438400c40a807a5eae985827562c34c8557e3bded4b"
+    },
+    {
+      "name": "figures/SupplementaryFigure5.pdf",
+      "bytes": 249708,
+      "sha256": "5afc015e479d8ac60c1f94c01b31c3a4214a25c6b9499a066477b66f8081f0d6"
+    },
+    {
+      "name": "figures/SupplementaryFigure4.pdf",
+      "bytes": 19607,
+      "sha256": "ff3c7e3ba0558a866cd617f51318b4d047fc4251252974b0787ab5208d24e4dd"
+    },
+    {
+      "name": "figures/SupplementaryFigure3.pdf",
+      "bytes": 26632,
+      "sha256": "07101c3c1f89055fa997bc20b3f4afb75b7f817f5486c800c6196aca3f50a32e"
+    },
+    {
+      "name": "figures/SupplementaryFigure2.pdf",
+      "bytes": 26428,
+      "sha256": "e7b57f131b8e034c83b6c2b1072707628805810edcf51ba738a998f2140b24e9"
+    },
+    {
+      "name": "figures/SupplementaryFigure1.pdf",
+      "bytes": 23601,
+      "sha256": "b814e10cb2a20356b82cf456631a2e16b078037f1fa797bc764158015d058e34"
+    },
+    {
+      "name": "figures/Figure5.pdf",
+      "bytes": 37451,
+      "sha256": "892e98d39d9c0d4e62924e52bd0716da2544fe6a5b8c7d1cd17caf048448af0d"
+    },
+    {
+      "name": "figures/Figure4.pdf",
+      "bytes": 46348,
+      "sha256": "5378006033051661dca97007de731358ceb91afa25a65abc3d4d712925791e85"
+    },
+    {
+      "name": "figures/Figure3.pdf",
+      "bytes": 36935,
+      "sha256": "6c9013d05c018f1a1479d67a050780e8acd3821ca1fad6e3ae76f3bce7053535"
+    },
+    {
+      "name": "figures/Figure2.pdf",
+      "bytes": 34800,
+      "sha256": "6a1f5aaf2542fa794ec10ee5c7075eb6378fa0b8da3f93e24704aa41ee936fe1"
+    },
+    {
+      "name": "figures/Figure1.pdf",
+      "bytes": 2120732,
+      "sha256": "334a40687313bf3322b969693698448049c8406451b6e84797e90851471853e6"
+    }
+  ],
+  "submitted_documents": {
+    "Resonant_enhancement_and_source_priors_shape_subwavelength_acoustic_reconstruction.zip": {
+      "bytes": 2676501,
+      "sha256": "ff96a63db7472578e6da9985f7833fc765ae87130fddfdfafd7a61ea35123aae"
+    },
+    "Resonant_enhancement_and_source_priors_shape_subwavelength_acoustic_reconstruction.pdf": {
+      "bytes": 2626820,
+      "sha256": "77524e0c372469935bca5d28d926b92bd45af0ec46e68813feb3f14f345206bd",
+      "pages": 29,
+      "metadata": {
+        "/Author": "",
+        "/CreationDate": "D:20261117110054Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "",
+        "/ModDate": "D:20261117110054Z",
+        "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) kpathsea version 6.4.2",
+        "/Producer": "pdfTeX-1.40.29",
+        "/Subject": "",
+        "/Title": "",
+        "/Trapped": "/False"
+      }
+    },
+    "draft_final/supplementary.pdf": {
+      "bytes": 786778,
+      "sha256": "51668744e4a51aa321b76ecd9c95b59b190c1af50e98ae7dba66c5d69da45531",
+      "pages": 27,
+      "metadata": {
+        "/Author": "",
+        "/CreationDate": "D:20261116134709Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "",
+        "/ModDate": "D:20261116134709Z",
+        "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) kpathsea version 6.4.2",
+        "/Producer": "pdfTeX-1.40.29",
+        "/Subject": "",
+        "/Title": "",
+        "/Trapped": "/False"
+      }
+    }
+  },
+  "main_references": 52,
+  "supplement_references": 16,
+  "main_figures": 5,
+  "supplementary_figures": 8,
+  "supplementary_notes": 16,
+  "supplementary_tables": 1,
+  "all_13_figures_identical_to_v1_0_0": true,
+  "source_path_changes": "Only graphicspath removal and includegraphics path remapping in paper/*.tex; complete original sources are in the unchanged submitted project ZIP.",
+  "historical_citation": "The unchanged submitted manuscript cites deposit version 1.0.0, DOI 10.5281/zenodo.24221204. This corrected companion snapshot is version 1.0.1 with a distinct DOI."
+}

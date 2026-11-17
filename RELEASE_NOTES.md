@@ -1,3 +1,22 @@
+# Version 1.0.1 — released 17 November 2026
+
+DOI: <https://doi.org/10.5281/zenodo.24308307>.
+
+- Replace the earlier manuscript snapshot with the exact amended submission
+  supplied by the authors: main PDF (29 pages), Supplement PDF (27 pages),
+  complete original Overleaf ZIP, and unpacked LaTeX with figure paths remapped.
+- Match the submitted abstract, affiliations, author contributions, Funding
+  declaration, 52 main references, 16 Supplementary Notes and 16 supplementary
+  references. Do not change the submitted wording or its historical archive citation.
+- All 13 supplied figure PDFs, numerical data and 18 original checkpoint files
+  remain unchanged from version 1.0.0. The numerical audit is aligned with the
+  revised prose and explicitly checks the added tolerance/reference-budget claims.
+- Keep the previous GitHub tag and Zenodo version 1.0.0 available. The unchanged
+  submitted manuscript cites that DOI; current availability wording identifies
+  this corrected companion version in `docs/PUBLICATION.md`.
+- Licences remain MIT for author-owned code and CC BY 4.0 for author-owned
+  data/documentation, with the same publisher-template exception.
+
 # Version 1.0.0 — released 16 November 2026
 
 Companion package for the author-selected manuscript edition 4 dated

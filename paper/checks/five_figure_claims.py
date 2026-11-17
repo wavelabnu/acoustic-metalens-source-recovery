@@ -143,7 +143,7 @@ def audit_main(main, led):
         sigma=np.linalg.svd(T[0],compute_uv=False)[0]*10**(-64/20)
         ds=[np.sqrt(2)*np.linalg.norm(t@(s2-s1))/sigma for t in T]
         seq('model candidate discriminant separation',ds,
-            r'are \$NUM\$ noise standard deviations apart.*?and \$NUM\$ with it')
+            'is only \\$NUM\\$ without the lens, compared with \\$NUM\\$ with it')
         powers=[np.linalg.norm(t@source)**2/(t.shape[0]*sigma*sigma)
                 for t in T for source in (s1,s2)]
         led.check_ints('both model candidates exceed total noise in both arms',
@@ -186,7 +186,7 @@ def audit_main(main, led):
             'fig02_b_estimation.csv','scalar_complex_rms',
             [dict(arm=tag,mode=m,draw='0') for tag in ('nolens','withlens') for m in modes])
         one('selected model scalar RMS percentage',100*state['comparison']['nolens']['cos_p4']['rms'],
-            r'finest pattern.*?RMS amplitude error of \$NUM\\%\$')
+            'finest pattern.*?RMS amplitude error of only \\$NUM\\\\%\\$')
         T=state['operator'];u,s,vh=np.linalg.svd(T,full_matrices=False)
         rank=int(np.count_nonzero(s>float(z['rank_edge'])*state['sigma']))
         projected=[abs(np.vdot(no[m]['truth'],vh[:rank].conj().T@(vh[:rank]@no[m]['truth']))) for m in modes]
@@ -213,10 +213,10 @@ def audit_main(main, led):
         source_seq('Figure 2 common full-profile RMS scores',rms,'fig02_c_recovery.csv','profile_rms',
             [dict(arm=arm,mode=m,speaker='1') for arm in ('nolens','withlens') for m in modes])
         seq('selected model RMS profile errors',[rms[2],rms[5]],
-            r'RMS relative profile error of \$NUM\$; with the lens the error is \$NUM\$')
+            'RMS relative profile error is \\$NUM\\$\\..*?latter to \\$NUM\\$')
         led.check_ints('one half-mean-square profile tolerance in main and driver',
             [np.isclose(PROFILE_RTOL**2,.5),r'E_{\rm prof}\le1/\sqrt2' in main.text],[True,True])
-        one('reference model budget',state['budget_db'],r'At the \$NUM\$~dB reference budget')
+        one('reference model budget',state['budget_db'],'Figure~\\\\ref\\{fig:model\\} uses \\$NUM\\$~dB')
         one('model noise-to-gain ratio mantissa',state['sigma']*1e4,
             r'noise-to-gain ratio \$\\sigma_n/\\sigma_1=10\^\{-64/20\}\\simeq\s*NUM\\times10\^\{-4\}\$')
         for mode in modes:
@@ -266,10 +266,10 @@ def audit_main(main, led):
                 /np.linalg.norm(H.reshape(-1,8)@patterns.T,axis=0))
         one('measured complex cutoff',3*(np.sqrt(41*6)+np.sqrt(8)),r'operational cutoff \$3\(\\sqrt\{KM\}\+\\sqrt N\)=NUM\$')
         seq('selected weak and strongest measured gains',[s[0][3],s[1][3],s[0][0],s[1][0]],
-            r'fourth singular value rises from \$NUM\$ to \$NUM\$, whereas the strongest rises from \$NUM\$ to \$NUM\$')
+            r'fourth singular value (?:rises )?from \$NUM\$ to \$NUM\$,.*?strongest(?: value)? rises from \$NUM\$ to \$NUM\$')
         seq('Supplement baseline-weighted gains use the same convention as main',
             [s[0][3],s[1][3],s[0][0],s[1][0]],
-            r'fourth singular value rises from \$NUM\$ to \$NUM\$, whereas the strongest rises from \$NUM\$ to \$NUM\$',
+            r'fourth singular value (?:rises )?from \$NUM\$ to \$NUM\$,.*?strongest(?: value)? rises from \$NUM\$ to \$NUM\$',
             Manuscript('supplement.tex'))
         for arm,sv in [('no_lens',s[0]),('with_lens',s[1])]:
             source_seq(arm+' fifth gain in Figure 3 Source Data',[sv[4]],
@@ -280,7 +280,7 @@ def audit_main(main, led):
         fine,coarse=[modes.index(m) for m in ('cos_p3','cos_p2')]
         seq('finer-pattern recorded response levels',
             [z[k+'_margin_shot_median'][fine] for k in ('nolens','lens')],
-            r'finer \$\\lambda/19.5\$ cosine gives received-power levels of \$NUM\$~dB without the lens and \$NUM\$~dB with it')
+            'finer \\$\\\\lambda/19.5\\$ cosine gives recorded power levels of \\$NUM\\$~dB without the lens and \\$NUM\\$~dB with it')
         seq('coarser-pattern recorded response levels',
             [z[k+'_margin_shot_median'][coarse] for k in ('nolens','lens')],
             r'coarser \$\\lambda/13\$ cosine gives \$NUM\$ and \$NUM\$~dB, respectively')
@@ -307,7 +307,7 @@ def audit_main(main, led):
             coincident+=sum(np.any(np.isclose(b,entering,rtol=0,atol=1e-9))
                             for b in recovery[arm]['budget_db'])
         one('profile-error thresholds coincide with floor-rank entries',coincident,
-            r'All \$NUM\$ plotted profile-error thresholds coincide, on the sampled budget grid,')
+            'all \\$NUM\\$ plotted recovery thresholds coincide, on the sampled budget grid,')
         led.check_ints('raw-power detection budgets reproduce the adopted grid',
             [np.allclose(np.ceil(detection[tag]*10)/10,z[arm+'_B_detected'],atol=1e-9)
              for tag,arm in [('nolens','nolens'),('withlens','lens')]],[True,True])
@@ -322,7 +322,7 @@ def audit_main(main, led):
         seq('profile-error passing counts at each available budget',
             [np.count_nonzero(recovery[arm]['rms_at_available']<=PROFILE_RTOL)
              for arm,sv in (('nolens',s[0]),('lens',s[1]))],
-            r'At the acquired background level, \$NUM\$ of eight patterns pass this criterion without the lens and \$NUM\$ with it')
+            'For profile recovery, \\$NUM\\$ of eight patterns pass without the lens and \\$NUM\\$ with it')
         with (OUT/'source_data/fig03_bcd_budgets.csv').open(encoding='utf-8') as stream:
             rows=list(csv.DictReader(stream))
         led.check_ints('Figure 3 known-pattern amplitude Source Data',
@@ -405,7 +405,43 @@ def audit_main(main, led):
         from figure_revision import model_parameter_choice_data,recorded_setting_sensitivity_data
         p=model_parameter_choice_data();supp=Manuscript('supplement.tex')
         seq('interior model reference-budget interval',p['budget_interval_db'],
-            r'hold from \$NUM\$ to \$NUM\$~dB on the')
+            r'rank is three throughout \$NUM\$--\$NUM\$~dB',supp)
+        # The submitted text adds the narrower interval preserving all six
+        # Figure 2c pass/fail outcomes. Recompute complete risk at every grid
+        # point, with source bias and propagated inverse noise kept separate.
+        state,_=model_amplitude_data()
+        budgets=np.arange(round(p['budget_interval_db'][0]*10),
+                          round(p['budget_interval_db'][1]*10)+1)/10
+        stable=np.ones(len(budgets),dtype=bool)
+        ranks={}
+        for arm in ('nolens','withlens'):
+            T=state['operators'][arm]
+            _,sv,vh=np.linalg.svd(T,full_matrices=False)
+            patterns=np.array([row['truth'] for row in state['comparison'][arm].values()])
+            norm2=np.sum(abs(patterns)**2,axis=1)
+            sigma=sv[0]*10**(-budgets/20)
+            edge=3*(np.sqrt(T.shape[0])+np.sqrt(T.shape[1]))
+            keep=sv[:,None]>edge*sigma[None,:]
+            captured=abs(vh@patterns.T)**2
+            bias=np.maximum(norm2[:,None]-captured.T@keep,0)
+            variance=sigma**2*np.sum(keep/sv[:,None]**2,axis=0)
+            risk=np.sqrt((bias+variance)/norm2[:,None])
+            reference=np.flatnonzero(np.isclose(budgets,state['budget_db']))[0]
+            stable&=np.all((risk<=PROFILE_RTOL)==(risk[:,reference]<=PROFILE_RTOL)[:,None],axis=0)
+            ranks[arm]=keep.sum(axis=0)
+        kept=budgets[stable]
+        assert len(kept) and np.allclose(np.diff(kept),.1)
+        seq('submitted main unchanged model-profile verdict interval',[kept[0],kept[-1]],
+            r'unchanged throughout the sampled \$NUM\$--\$NUM\$~dB range')
+        seq('Supplement unchanged model-profile verdict interval',[kept[0],kept[-1]],
+            r'narrower interval \$NUM\$--\$NUM\$~dB',supp)
+        one('Supplement number of unchanged-verdict model budgets',len(kept),
+            r'Across these \$NUM\$ budgets',supp)
+        words=re.search(r'retained ranks are (\w+) and (\w+)',supp.text).groups()
+        integers={word:i for i,word in enumerate('zero one two three four five six seven eight nine ten'.split())}
+        led.check_ints('Supplement retained ranks throughout unchanged-verdict interval',
+            [int(np.unique(ranks[arm][stable]).item()) for arm in ('nolens','withlens')],
+            [integers[word] for word in words])
         seq('isolated linewidth and absorption share',[p['linewidth_pct'],p['loss_share_pct']],
             r'fractional linewidth is \$NUM\\%\$; absorption contributes \$NUM\\%\$ of the total isolated damping',supp)
         one('model tone-grid step',p['tone_step_pct'],r'tone spacing of \$NUM\\%\$ of \$f_0\$',supp)
@@ -432,7 +468,7 @@ def audit_main(main, led):
         fits=measured_amplitude_data();no=fits['A']['cos_p4'];yes=fits['B']['cos_p4']
         d=scope('recorded Results',r'\subsection{The lens improves',r'\subsection{Source assumptions')
         seq('recorded scalar-error medians',[100*np.median(no['errors']),100*np.median(yes['errors'])],
-            r'error falls from \$NUM\\%\$ to \$NUM\\%\$',d)
+            'error of the known-profile complex amplitude fit falls from \\$NUM\\\\%\\$ without the lens to \\$NUM\\\\%\\$ with it',d)
         seq('conditional scalar limits',[100*no['conditional_limit'],100*yes['conditional_limit']],
             r'conditional limit changes from \$NUM\\%\$ to \$NUM\\%\$',main)
         c=loaders.fig04_tsvd_complex();errors=[];weighted_differences=[]
@@ -460,7 +496,7 @@ def audit_main(main, led):
             [dict(arm=a,mode=m,speaker='1',record='0') for a in ('A','B')
              for m in ('sin_p1','sin_p2','cos_p4')])
         seq('selected recorded RMS profile errors',[rms[2],rms[5]],
-            r'RMS relative profile error falls from \$NUM\$ to \$NUM\$',d)
+            'full-profile RMS relative error falls from \\$NUM\\$ to \\$NUM\\$',d)
         seq('recorded full-profile passing counts',
             [sum(v['rms']<=PROFILE_RTOL for v in profiles[a].values()) for a in ('A','B')],
             r'\$NUM/3\$ no-lens cases and \$NUM/3\$ with-lens cases pass',d)
@@ -489,7 +525,7 @@ def audit_main(main, led):
     def priors():
         data=prior_data();d=scope('prior Results',r'\subsection{Source assumptions',r'\section{Discussion}')
         patterns=[r'errors are \$NUM\\%\$, \$NUM\\%\$ and \$NUM\\%\$ without the lens\. With the lens, the errors are \$NUM\\%\$, \$NUM\\%\$ and \$NUM\\%\$',
-            r'profiles are \$NUM\\%\$, \$NUM\\%\$ and \$NUM\\%\$ without the lens\. With the lens, the errors are \$NUM\\%\$, \$NUM\\%\$ and \$NUM\\%\$']
+            'estimates are \\$NUM\\\\%\\$, \\$NUM\\\\%\\$ and \\$NUM\\\\%\\$, respectively\\. With the lens, the corresponding errors are \\$NUM\\\\%\\$, \\$NUM\\\\%\\$ and \\$NUM\\\\%\\$']
         for group,pat in zip(('model','measured'),patterns):
             errors=[];shifts=[]
             for tag in ('nolens','withlens'):
@@ -524,7 +560,7 @@ def audit_main(main, led):
         uncertainty=scope('Figure 5 uncertainty',r'\label{eq:uncertainty}',r'\end{equation}')
         one('Figure 5 squared Mahalanobis radius',4,r'\\le\s*NUM',uncertainty)
         one('two-dimensional Gaussian probability inside radius two',
-            100*(-np.expm1(-2)),r'contains \$NUM\\%\$ of the probability',d)
+            100*(-np.expm1(-2)),'true displayed coefficients in \\$NUM\\\\%\\$ of repeated realizations',d)
         from direct.mode_prior import operator,real_operator
         from figure_revision import ellipse
         import matplotlib.pyplot as plt

@@ -1,4 +1,4 @@
-"""Recalculate the edition-4 Supplement's rank-sensitivity table.
+"""Recalculate the submitted Supplement's rank-sensitivity table.
 
 Optionally compare a fresh C10 covariance run against the frozen reference.
 """
@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def check(covariance_dir=None):
-    report={'manuscript_edition':4,'rank_rows_verified':0}
+    report={'manuscript_snapshot':'submitted_20261117','rank_rows_verified':0}
     with np.load(ROOT/'paper/wavelab_figs_20260803/professor_v7/fig04_tsvd_complex.npz',allow_pickle=False) as data:
         rows=list(csv.DictReader((ROOT/'supplementary/source_data/rank_sensitivity_table.csv').open()))
         for row in rows:

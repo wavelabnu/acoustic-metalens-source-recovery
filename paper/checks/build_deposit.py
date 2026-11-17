@@ -21,7 +21,7 @@ import zipfile
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = ROOT / "dist"
 MODEL_ROOT = pathlib.Path("notebooks/models")
-MANUSCRIPT_EDITION = 4
+MANUSCRIPT_SNAPSHOT = "submitted_20261117"
 RETIRED_PATHS = (
     "supplementary/catalogue", "supplementary/original_analysis",
     "supplementary/retrain_catalogue.py", "supplementary/make_figS_catalogue.py",
@@ -208,15 +208,15 @@ def release_metadata(root: pathlib.Path, files: list[pathlib.Path]) -> dict:
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "source_commit": revision, "source_tree_dirty": dirty,
         "python": sys.version, "platform": platform.platform(),
-        "dependencies": versions, "doi": "10.5281/zenodo.24221204",
-        "version": "1.0.0", "publication_date": "2026-11-16",
+        "dependencies": versions, "doi": "10.5281/zenodo.24308307",
+        "version": "1.0.1", "publication_date": "2026-11-17",
         "publication_status": "release",
         "licences": {"author_owned_code": "MIT", "author_owned_data_and_documentation": "CC-BY-4.0",
                      "third_party_exception": "See LICENSE_STATUS.md"},
-        "manuscript_edition": MANUSCRIPT_EDITION,
+        "manuscript_snapshot": MANUSCRIPT_SNAPSHOT,
         "license_file_included": (root / "LICENSE").is_file(),
         "checkpoint_count": sum(p.suffix == ".pt" for p in files),
-        "scope": "14 November 2026 manuscript, edition 4; 5 main and 8 supplementary figures; 16 Supplementary Notes and 1 table; 18 retained prior checkpoints",
+        "scope": "Amended submitted manuscript, 17 November 2026; 5 main and 8 supplementary figures; 16 Supplementary Notes and 1 table; 18 retained prior checkpoints",
     }
 
 

@@ -2,13 +2,14 @@
 
 Companion materials for **Resonant enhancement and source priors shape
 subwavelength acoustic reconstruction**, by **Nurtugan Rysmambetov, Zhanat
-Kappassov and Bakhtiyar Orazbayev**. Prepared version **1.0.0** follows the
-14 November 2026 submission, **manuscript edition 4** (decision 117): five
-main figures, eight supplementary figures, Supplementary Notes 1–16 and one table.
+Kappassov and Bakhtiyar Orazbayev**. Version **1.0.1** follows the amended
+manuscript submitted on **17 November 2026**: five main figures, eight
+supplementary figures, Supplementary Notes 1–16 and one table.
 
 - GitHub: <https://github.com/wavelabnu/acoustic-metalens-source-recovery>
-- Zenodo: <https://doi.org/10.5281/zenodo.24221204> (version 1.0.0).
-- Release date: **16 November 2026**. Code: MIT; data and documentation: CC BY 4.0.
+- Version DOI: <https://doi.org/10.5281/zenodo.24308307>.
+- All versions: <https://doi.org/10.5281/zenodo.24221203>.
+- Release date: **17 November 2026**. Code: MIT; data and documentation: CC BY 4.0.
 
 ## Contents
 
@@ -22,12 +23,12 @@ main figures, eight supplementary figures, Supplementary Notes 1–16 and one ta
 | `supplementary/covariance/` | C10 analysis, complete input closure and reference outputs for Note 16 |
 | `supplementary/source_data/` | Rank-sensitivity table |
 | `paper/main.*`, `paper/supplement.*` | Final manuscript and Supplement used by the numerical audit |
-| `manuscript/overleaf_project_20261114.zip` | Unchanged author-supplied edition-4 LaTeX project |
+| `manuscript/overleaf_project_submitted_20261117.zip` | Unchanged author-supplied amended submission project |
 | `provenance/` | Original archive checksums and source records |
 | `REPRODUCTION_REPORT.json` | Actual validation environment, outcomes and limits |
 
 See `deposit/README.md` for the figure-to-data map and array conventions.
-The manuscript snapshot is the preserved edition 4 selected by the authors.
+The manuscript snapshot is the amended submitted version supplied by the authors on 17 November 2026.
 The `paper/` sources preserve the final text with remapped figure paths;
 supplied PDFs are unchanged final submission files. Author-only submission
 fields remain the authors' responsibility.
@@ -130,11 +131,18 @@ the preparation changes are in `RELEASE_NOTES.md`.
 ## Citation and reuse
 
 `CITATION.cff` provides the three authors, version, release date and DOI.
-Cite <https://doi.org/10.5281/zenodo.24221204>. No article DOI has been supplied.
+Cite <https://doi.org/10.5281/zenodo.24308307>. No article DOI has been supplied.
 Author-owned software is MIT; author-owned data, figures, manuscript text
 and documentation are CC BY 4.0. See `LICENSE_STATUS.md` for the exact scope
 and the publisher-template exception.
 
-The dated manuscript snapshots preserve edition 4 as selected by the authors.
-Their availability statements describe the preparation date; use the current
-DOI and availability wording in `docs/PUBLICATION.md` for journal submission.
+The supplied manuscript PDF, Supplement PDF and complete Overleaf ZIP are
+byte-identical to the amended submission files. The unpacked `paper/*.tex`
+changes only figure search paths. Authorship affiliations, funding, abstract,
+references and declarations follow that submitted text.
+
+The submitted manuscript cites archive version **1.0.0**, DOI
+<https://doi.org/10.5281/zenodo.24221204>. That historical citation is preserved
+inside the unchanged manuscript snapshots. This updated companion is
+**1.0.1**, DOI <https://doi.org/10.5281/zenodo.24308307>. Current availability
+wording for a future manuscript amendment is in `docs/PUBLICATION.md`.

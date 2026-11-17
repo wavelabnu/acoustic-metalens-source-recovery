@@ -157,7 +157,7 @@ def _compact_model_protocol():
     led.check('Supplement complex noise exponent',-np.log10(NOISE_ABS),
         d.number(r'\\sigma_n=10\^\{-NUM\}'))
     led.check_seq('Supplement normalized reference',[SIG1,DR_DB],
-        d.numbers(r'\\sigma_1=NUM\$: the common relative budget is \$NUM\$'))
+        d.numbers('\\\\sigma_1=NUM\\$, giving a common relative budget .*?=NUM\\$~dB'))
     rows=driver_sweep()
     led.check('Supplement sampled one-parameter driver cases',len(rows),
         d.number(r'\$NUM\$ sampled one-parameter cases'))
@@ -227,8 +227,8 @@ def _compact_coupling_control():
     led.check_seq('Supplement selected measured resonances',
         [BATCH.selected_f0().min(),BATCH.selected_f0().max()],
         d.numbers(r'measured frequencies \$NUM\$--\$NUM\$~Hz'))
-    led.check('Supplement batch frequency variation',100*BATCH.half_span_frac(),
-        d.number(r'batch\x27s \$\\pmNUM\\%\$'))
+    led.check('Supplement full batch frequency spread',200*BATCH.half_span_frac(),
+        d.number('fractional spread of approximately \\$NUM\\\\%\\$'))
     led.check('Supplement fractional lens linewidth',100*(1+cfg.rw_loss)/cfg.q_factor,
         d.number(r'\\simeqNUM\\%'))
     led.check_seq('Supplement detuned and identical margins',
@@ -251,10 +251,10 @@ def _compact_installation():
     led.check_ints('Supplement common frequency shifts',[len(COMB_PHASES)],
         _note_words(d,r'tones and (\w+) common frequency shifts'))
     led.check('Supplement median high-Q crossing',Q_CROSS,d.number(r'near \$Q\\approxNUM\$'))
-    lo,hi,half=d.numbers(r'shading \$NUM\$--\$NUM\\,d\$.*?dotted array half-height \$NUM\\,d\$')
+    lo,hi,half=d.numbers('shading marks \\$NUM\\$--\\$NUM\\\\,d\\$,.*?source-array half-height \\$NUM\\\\,d\\$')
     led.check('Supplement aperture caption array size',max(abs(cfg.y_src))/cfg.d,half)
-    led.check_ints('Supplement aperture caption factor',
-        [int(round(_aper(lo.value)/_aper(hi.value)))],_note_words(d,r'factor of about (\w+)'))
+    led.check_ints('Supplement aperture sweep reduces the weakest margin',
+        [_aper(lo.value)>_aper(hi.value)],[True])
     led.check('Supplement installation caption noise level',DR_DB,d.number(r'at relative budget \$B=NUM\$~dB'))
     led.check('Supplement installation caption threshold',1.,d.number(r'level is \$NUM\$'))
     led.check_seq('Supplement Q-sweep caption budgets',[cfg.f_max_count,DR_DB,80,DR_DB-20*np.log10(2)],
@@ -296,7 +296,7 @@ def _compact_capture_and_errors():
         led.check_seq('Supplement no-lens capture sensitivity '+tag,
             [int(np.flatnonzero(cap>=c.value).max()) for c in criteria],[q]*len(criteria))
     led.check('Supplement m4 noiseless profile error',np.sqrt(1-capture[4]),
-        d.number(r'relative profile error \$NUM\$'))
+        d.number('noise-free projection error \\$NUM\\$'))
     led.check_seq('Supplement model finest shape half-periods',
         [FEAT[k] for k in ('independent, no lens','independent + lens','coupled, no lens','coupled + lens')],
         d.numbers(r'\$NUMd\$/\$NUMd\$ for independent sources and \$NUMd\$/\$NUMd\$ for coupled sources'))
@@ -500,11 +500,14 @@ def _compact_captions_and_priors():
     led.check_seq('Supplement source-pattern gallery indices',[1,cfg.n_src],gallery)
     recon=_supp_note(11)
     data=_fig.measured_blocks('nolens');freq=data['freqs_hz']
+    led.check_ints('Supplement recorded-reconstruction caption source/sensor counts',
+        [data['D'].shape[2],data['Y'].shape[2]],
+        _note_words(recon,r'Measured columns use (\w+) loudspeakers, (\w+) microphones'))
     led.check_seq('Supplement recorded-reconstruction caption apparatus',
-        [data['D'].shape[2],data['Y'].shape[2],len(freq),freq.min(),freq.max()],
-        recon.numbers(r'\$NUM\$ loudspeakers, \$NUM\$ microphones, \$NUM\$ tones over \$NUM\$--\$NUM\$~Hz'))
+        [len(freq),freq.min(),freq.max()],
+        recon.numbers('and \\$NUM\\$ tones over \\$NUM\\$--\\$NUM\\$~Hz'))
     led.check('Supplement recorded-reconstruction caption budget',DR_DB,
-        recon.number(r'at the \$NUM\$~dB reference budget'))
+        recon.number('the \\$NUM\\$~dB reference budget'))
 
 def _pattern_map_claims():
     """Complete matched-count sets in the compact Supplement, plus map invariants."""
@@ -527,7 +530,7 @@ def _pattern_map_claims():
         led.check_ints('matched four-channel sets '+label, sets, expected)
 
 cfg=Config();lens=Lens(cfg);FREQS=cfg.freqs(cfg.f_max_count);MODES=source_modes(cfg.n_src)
-DR_DB=_supp_note(1).number(r'common relative budget is \$NUM\$').value
+DR_DB=_supp_note(1).number('giving a common relative budget .*?=NUM\\$~dB').value
 SIG1=NOISE_ABS*10**(DR_DB/20)
 ARMS={'independent, no lens':dict(with_lens=False,src_scatters=False),
       'coupled, no lens':dict(with_lens=False,src_scatters=True),

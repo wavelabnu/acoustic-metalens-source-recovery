@@ -1,26 +1,26 @@
 cff-version: 1.2.0
-message: "If you use this code or data, please cite this Zenodo release for manuscript edition 4."
+message: "If you use this code or data, please cite this Zenodo release for the amended submitted manuscript dated 17 November 2026."
 type: software
 title: "Code and data for: Resonant enhancement and source priors shape subwavelength acoustic reconstruction"
-version: 1.0.0
-date-released: 2026-11-16
+version: 1.0.1
+date-released: 2026-11-17
 license:
   - MIT
   - CC-BY-4.0
-doi: 10.5281/zenodo.24221204
+doi: 10.5281/zenodo.24308307
 url: https://github.com/wavelabnu/acoustic-metalens-source-recovery
 repository-code: https://github.com/wavelabnu/acoustic-metalens-source-recovery
 authors:
   - family-names: Rysmambetov
     given-names: Nurtugan
-    affiliation: "Department of Physics, Nazarbayev University; Robotics Center, ISSAI, Astana, Kazakhstan"
+    affiliation: "Department of Physics; Robotics Center, Institute of Smart Systems and Artificial Intelligence; Nazarbayev University, Astana, Kazakhstan"
   - family-names: Kappassov
     given-names: Zhanat
-    affiliation: "Department of Robotics, Nazarbayev University; Robotics Center, ISSAI, Astana, Kazakhstan"
+    affiliation: "School of Computing and Artificial Intelligence; Robotics Center, Institute of Smart Systems and Artificial Intelligence; Nazarbayev University, Astana, Kazakhstan"
   - family-names: Orazbayev
     given-names: Bakhtiyar
     orcid: https://orcid.org/0000-0002-3597-1873
-    affiliation: "Department of Physics, Nazarbayev University; Robotics Center, ISSAI, Astana, Kazakhstan"
+    affiliation: "Department of Physics; Robotics Center, Institute of Smart Systems and Artificial Intelligence; Nazarbayev University, Astana, Kazakhstan"
 keywords:
   - acoustic metamaterials
   - resonant metalens
